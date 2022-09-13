@@ -152,7 +152,6 @@ alias gt='git ls-tree' # give content info about a git-tree
 
 # ----------- neovim -----------
 # nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword
-# neovide --multigrid ~~()~~> "nv"
 alias nn='nvim'
 
 # ----------- varied -----------
