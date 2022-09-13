@@ -32,18 +32,6 @@
 # NOTE: also in .zshenv
 export HISTFILE=$HOME/.zsh_history
 
-# ~~~~~~~~ --ZSH Completions ~~~~~~~~ #
-# --not using completions, but leaving this here should there be sufficient future interest--
-# useful info on completion system: 
-#   https://thevaluable.dev/zsh-completion-guide-examples/
-
-# # as-needed-loading, without alias expansion and in in zsh-style, of comp(letion)init
-# autoload -Uz compinit
-# compinit
-
-# brew folder important to adding completions:
-#   /opt/homebrew/share/zsh/site-functions
-
 
 # ######################### --ZSH Options --############################ #
 # SHOW: 'setopt' <-- shows currently set options
@@ -175,6 +163,23 @@ eval "$(zoxide init zsh)"
 alias c='z'
 
 
+# ~~~~~~~~ --ZSH Completions ~~~~~~~~ #
+# --not using completions, but leaving this here should there be sufficient future interest--
+# --On Why:
+#       arcane, maintenance heavy (new command/new options req changes),
+#       can slow down shell, and, per purposes of this repo,
+#       getting comfortable with  'man xxx' | 'xxx --help' is helpful :) --
+# useful info on completion system: 
+#   https://thevaluable.dev/zsh-completion-guide-examples/
+
+# # as-needed-loading, without alias expansion and in in zsh-style, of comp(letion)init
+# autoload -Uz compinit
+# compinit
+
+# brew folder important to adding completions:
+#   /opt/homebrew/share/zsh/site-functions
+
+
 # ############################# --fzf-- ################################ #
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
@@ -182,34 +187,32 @@ alias c='z'
 # - See the source code (completion.{bash,zsh}) for the details.
 _fzf_compgen_path() {
     fd --unrestricted --follow --exclude ".git" . "$1"
-    # use fd / show hidden & ignored (e.g. due to .gitignore) / don't ignore .gitignore and similarly noted dirs / follow symlinkgs / exclude .git dirs / ? / base_dir
+    # use fd / show hidden & ignored (e.g. due to .gitignore)
+    # / follow symlinkgs / exclude .git dirs / dir_argument
 }
 
-# Use fd to generate the list for directory completion
 _fzf_compgen_dir() {
     fd --type d --unrestricted --follow --exclude ".git" . "$1"
+    # use fd / type: dirs / show hidden & ignored (e.g. due to .gitignore)
+    # / follow symlinkgs / exclude .git dirs / dir_argument
 }
 
-# use -fd- instead of -find- as default 
-# - also follows symbolic_links && does NOT exclude hidden files
 export FZF_DEFAULT_COMMAND='fd --type f --unrestricted --exclude .git'
     # use fd / type: files / show hidden & ignored (e.g. due to .gitignore)
     # / follow symlinkgs / exclude .git dirs
 
-# applies the above default to -[Ctrl-T]- as well
+# <C+t>: search files FROM LOCAL DIR DOWN and drop chosen into commandline
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# and to -[Alt-C]-
+
+# <A+c>: search directories FROM $HOME DOWN and then cd to chosen
 export FZF_ALT_C_COMMAND='fd --type d --unrestricted --follow . $HOME'
-    # use fd / type: directories / show hidden & ignored (e.g. due to .gitignore)
-    # / follow symlinkgs / search from '~'
+    # use fd / type: dirs / show hidden & ignored (e.g. due to .gitignore)
+    # / follow symlinkgs / exclude .git dirs / use $HOME as dir_argument
 
 # default options for fzf
 export FZF_DEFAULT_OPTS='--multi --preview "bat --style=numbers --color=always --line-range :500 {}"'
 # enable multiple selection (with tab/shft+tab) 
 # / preview with bat command [/show lines numbers / use color / line range 1through 500]
-
-# Options to fzf command
-# export FZF_COMPLETION_OPTS='--border --info=inline'
 
 # checks ("[ -f") if '.fzf.zsh' exists in ~ and then sources it if so
 # note: .fzf.zsh will have a reference to the location of the keybindings
@@ -218,6 +221,8 @@ export FZF_DEFAULT_OPTS='--multi --preview "bat --style=numbers --color=always -
 
 # ############################ --Prompt-- ############################# #
 # My first prompt :)
+# [leaving it here in case you ever want to go hyper-minimal or 
+#  want a cue on tossing a bit of color into another setup without installs]
 #PROMPT="%F{cyan}%n %1~ %# %f"
 
 # Starship.rs initializer (to be at "end" of file, along with the following line)
@@ -226,7 +231,7 @@ eval "$(starship init zsh)"
 
 # ########################### --ZSH Input Mods-- ####################### #
 # NOTE: location may change for a given installation
-#       if in doubt: `brew reinstall ...` and check the output location
+#       if in doubt: 'brew reinstall ...' and check the output location
 #       (it should give you an explicit "source ..." line to add)
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
