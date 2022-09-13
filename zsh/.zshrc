@@ -61,7 +61,7 @@ setopt auto_pushd
 # enable vi mode, increase visual responsiveness, load cursor change code
 bindkey -v
 export KEYTIMEOUT=1
-source ~/.config/zsh/sources/cursor-reflect-vimmode.zsh
+source ~/.config/zsh/sources/cursor-reflect-vimode.zsh
 
 # default editor
 # "VISUAL" and "EDITOR" usually substitutable, best to set both to same
