@@ -27,7 +27,7 @@ NOTE: there are some follow-up instructions in many of those, I *think* we have 
 `brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono fon-major-mono-display font-anonymous-pro`
 
 ## (3) Set-Up DotFiles
-1. Clone repo into specific folder: `git clone <repo-address> ~/.config`
+1. Clone repo into specific folder: `git clone git@github.com:ethanmsl/CLI-Starter.git ~/.config`
 2. Remove any `.zsh*` files from your `~` directory.  Check there are none: `ls ~/.zsh*`
 3. Symlink the zsh file that will say to look in that folder: `ln -s ~/.config/zsh/.zshenv ~/.zshenv`
 4. Remove some junk made in the earlier process: `rm ~/.zshprofile`
