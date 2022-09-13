@@ -20,7 +20,11 @@ they'll probably tell you to do this:
 `starship zsh-autosuggestions zsh-syntax-highlighting`
 
 ## (2c) Install Better Terminal Commands (basic set)  
-`brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
+1. `brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
+2. `$(brew --prefix)/opt/fzf/install` |> you will be prompted to make some choices: respond: **n**, **y**, **y**
+<img width="659" alt="fzf options install" src="https://user-images.githubusercontent.com/33399972/189981318-c3f07d58-4836-444c-b2ae-ab74aa763ec0.png">
+
+
 NOTE: there are some follow-up instructions in many of those, I *think* we have you set, but some testing is due.  As is a quick *healthcheck* script to make sure things are in smooth.
 
 ## (2d) Install fonts
