@@ -151,7 +151,7 @@ alias gs='git status'
 alias gt='git ls-tree' # give content info about a git-tree
 
 # ----------- neovim -----------
-# nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword
+# nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword AND 'nn' is apropos
 alias nn='nvim'
 
 # ----------- varied -----------
