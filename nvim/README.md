@@ -14,7 +14,9 @@ and, uh... *tada!*-ish :)
 Take a look at the Repo's original README at it's GitHub repo:
 
 ## (github) NVim-Basic-IDE
-https://github.com/LunarVim/nvim-basic-ide
+https://github.com/LunarVim/nvim-basic-ide [^1]
+
+[^1]: (note, in case you're familiar with the vim space: this is *NOT* related to "LunarVim"; this is a totally standard set-up that merely shares a creator)
 
 If you're interested in understanding the repo better I also highly recommend their YouTube series, which walks through the creation of a very similar predecessor repo:
 
