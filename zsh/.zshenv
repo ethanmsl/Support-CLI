@@ -1,4 +1,4 @@
-## --order of sourcing--
+# ~~~~~~~~ --order of sourcing-- ~~~~~~~~ #
 # (ignoring /etc/* files)
 # $ZDOTDIR/.zshenv
 # $ZDOTDIR/.zprofile <-- XOR .zlogin  (by intention, but not enforced)
@@ -35,12 +35,9 @@ export GIT_CONFIG_GLOBAL=$HOME/.config/git_global/.gitconfig
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH
 
-# ----------- Haskell ----------- 
-# this was where haskell wanted to install >>stack install haskell-dap ghci-dap haskell-debug-adapter<<
-export PATH=$PATH:$HOME/.local/bin
-
 # ----------- Rust ----------- 
 export PATH=$PATH:$HOME/.cargo/bin
+
 
 # ########################## --Environment Sourcing-- ###################### #
 # NOTE: "." is posix ~= of "source"
@@ -53,7 +50,3 @@ export PATH=$PATH:$HOME/.cargo/bin
 # . "$HOME/.cargo/env"
 # ^ this is just a PATH check and export if not found (made to be easily overidden)
 # unecessary, as we are directly exporting the PATH above, but kept for reference
-
-# -----------  Haskell -----------  #
-# checks if file is present then sources
-# [ -f "/Users/eskowronski-lutz/.ghcup/env" ] && source "/Users/eskowronski-lutz/.ghcup/env" # ghcup-env

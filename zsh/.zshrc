@@ -1,4 +1,4 @@
-## --order of sourcing--
+# ~~~~~~~~ --order of sourcing-- ~~~~~~~~ #
 # (ignoring /etc/* files)
 # $ZDOTDIR/.zshenv
 # $ZDOTDIR/.zprofile <-- XOR .zlogin  (by intention, but not enforced)
@@ -13,38 +13,49 @@
 #                           opened with each new window or tab in macOS
 
 
-# ZSH Documentation
-# 'man zshcontrib'  <-- man-page for a ton of zsh stuff
+# ~~~~~~~~ --useful documentation-- ~~~~~~~~ #
+# Man-page with a ton of ZSH info:
+#   'man zshcontrib'
+# Man-page with many (not all) ZSH options:
+#   'man zshoptions'
 
-# for completions: /opt/homebrew/share/zsh/site-functions
-
-# while this did not directly contribute to much here due to timing the 
-# following website deserves special mention: 
+# while this did not directly contribute to much here due to timing 
+# the following website deserves special mention:
 #   https://thevaluable.dev/zsh-install-configure-mouseless/
 
+
 # ############################ --ZSH Stuff-- ######################## #
-# sets the xsh_history file in its typical location, preventing it from
+# sets the zsh_history file in its typical location, preventing it from
 # being placed in our git versioned  ZSH/ directory (due to $ZDOTDIR setting in .zshenv)
+# this is principally as a backup defense (on top of gitignore) against accidentally
+# synching terminal history (and possibly sensitive data)
 # NOTE: also in .zshenv
 export HISTFILE=$HOME/.zsh_history
 
-# ############################ --ZSH Completions ######################## #
-# useful info on completion system: https://thevaluable.dev/zsh-completion-guide-examples/
+# ~~~~~~~~ --ZSH Completions ~~~~~~~~ #
 # --not using completions, but leaving this here should there be sufficient future interest--
+# useful info on completion system: 
+#   https://thevaluable.dev/zsh-completion-guide-examples/
 
 # # as-needed-loading, without alias expansion and in in zsh-style, of comp(letion)init
 # autoload -Uz compinit
 # compinit
 
+# brew folder important to adding completions:
+#   /opt/homebrew/share/zsh/site-functions
+
+
 # ######################### --ZSH Options --############################ #
-# SHOW: `setopt` <-- shows currently set options
-# SEE: `man zshoptions`
+# SHOW: 'setopt' <-- shows currently set options
+# SEE: 'man zshoptions'
 
 # set cd'ing with just directory names typed in
-# try to correct command and all arguments on line
-# all cd actions add last location to a stack (can used 'popd' to de-stack and travel to location)
 setopt auto_cd
+
+# try to correct command and all arguments on line
 setopt correct_all
+
+# all cd actions add last location to a stack (can used 'popd' to de-stack and travel to location)
 setopt auto_pushd
 
 # enable vi mode, increase visual responsiveness, load cursor change code
@@ -52,10 +63,12 @@ bindkey -v
 export KEYTIMEOUT=1
 source ~/.config/zsh/sources/cursor-reflect-vimmode.zsh
 
-# ----------- default editor -----------
-# alternatives: vim, nvim, helix
+# default editor
+# "VISUAL" and "EDITOR" usually substitutable, best to set both to same
 export EDITOR='nano'
-export VISUAL='nano' # "VISUAL" and "EDITOR" usually substitutable, best to set both to same
+export VISUAL='nano'
+# alternatives: vim, nvim, helix
+
 
 # ########################### --Aliases-- ############################## #
 # ¡NOTE!:  'alias -g ...' allows alias to work even if not first word in command
@@ -64,12 +77,10 @@ export VISUAL='nano' # "VISUAL" and "EDITOR" usually substitutable, best to set 
 #                       > fd whatever | al ~~> fd whatever | alias
 #                BUT    > sudo al  ~~> sudo al     <-- no expansion
 #                       > echo al ~~> echo al      <-- no expansion
-#               this can be corrected by globalling the alias, with the caveat
+#               this can be corrected by globaling the alias, with the caveat
 #               that that letter word will *always* expand
+#
 #  SEE: `which <alias>` to find what something is aliased to
-
-
-
 
 # ----------- shadow aliases (WoooOOOooo) -----------
 # I'm including these aliases for simplicity of adoption and to assist
@@ -77,7 +88,7 @@ export VISUAL='nano' # "VISUAL" and "EDITOR" usually substitutable, best to set 
 # I also have non-shadowed versions below
 # feel free (as with everything) to remove or adjust the following
 
-# ls series, but with color
+# ----- ls series, but with color -----
 # clasic ls, list view ll, and then an alias for tree also offered as 'lt'
 # NOTE: I have included '--all' ('-a') for all of the ls series
 #       that is not default behavior, but shows "hidden" files by default
@@ -87,10 +98,10 @@ alias -g ll='exa --all --long'
 alias -g lt='exa --all --tree --level=3'
 alias -g tree='exa --all --tree --level=6'
 
-# cat, but with color
+# ----- cat, but with color -----
 alias -g cat='bat --paging=never'
 
-# man(pages), but with color
+# ----- man(pages), but with color -----
 alias -g man='batman'
 
 # NOTE: three replacement commands are *NOT* shadowed here
@@ -98,6 +109,8 @@ alias -g man='batman'
 #       'rg' (ripgrep) mostly replaces 'grep', but has different syntax
 #       'c'/'z' (zoxide) mostly replace 'cd', but fuzzy corrects to closest visisted dir
 #       'fd' mostly replaces 'find', but has different syntax
+#       (and not included as defaults in our repo, but 'sd' vs 'sed': same deal)
+# ---------------------------
 
 # ----------- git -----------
 # git ~~()~~> "g"
@@ -137,29 +150,14 @@ alias gs='git status'
 
 alias gt='git ls-tree' # give content info about a git-tree
 
-# ----------- bare repos (git) -----------
-# Bare-Git Directory Alias -- for versioning ".dotfiles"
-alias dfg='/usr/bin/git --git-dir=$HOME/.dotFiles.git/ --work-tree=$HOME'
-
-# Bare-Git Directory Alias -- for versioning Mercutio Keyboard configs
-alias mercutio_git='/usr/bin/git --git-dir=$HOME/.mercutio_configs/ --work-tree=$HOME/qmk_firmware/keyboards/mechwild/mercutio/keymaps/'
-
 # ----------- neovim -----------
 # nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword
 # neovide --multigrid ~~()~~> "nv"
 alias nn='nvim'
-alias nv='neovide --multigrid'  # neovide is a GUI application for neovim
 
 # ----------- varied -----------
 # batman ~~()~~> "mab"
 alias mab='batman'
-
-# ...bandwhich... ~~()~~> "bandwhich"
-# at present ('22-VIII) bandwhich has error display issues on mac, and it also needs sudo access
-# '2>': routes stderr somewhere
-# '/dev/null': a sort of black hole of ignore
-alias bandwhich='sudo bandwhich 2> /dev/null'
-# ^NOT globalling due to the unudual sudo expansion
 
 # exa ~~()~~> "e"_fam  (~= "ls"_fam)
 alias es='exa -aF  --icons --sort="type"'
@@ -176,7 +174,6 @@ alias -g rg='rg --hidden --ignore-case'
 # z ~~()~~> "c"  (easier to type and a partial version of "cd", lol)
 eval "$(zoxide init zsh)"
 alias c='z'
-
 
 
 # ############################# --fzf-- ################################ #
@@ -207,11 +204,7 @@ export FZF_ALT_C_COMMAND='fd --type d --unrestricted --follow . $HOME'
     # use fd / type: directories / show hidden & ignored (e.g. due to .gitignore)
     # / follow symlinkgs / search from '~'
 
-
-# Set's default options for -fzf-
-# NOMINALLY we should NOT set this to
-# because -bat- onle works with lists of files...
-# though I think it just drops a warning pane then, yeah...
+# default options for fzf
 export FZF_DEFAULT_OPTS='--multi --preview "bat --style=numbers --color=always --line-range :500 {}"'
 # enable multiple selection (with tab/shft+tab) 
 # / preview with bat command [/show lines numbers / use color / line range 1through 500]
@@ -230,6 +223,7 @@ export FZF_DEFAULT_OPTS='--multi --preview "bat --style=numbers --color=always -
 
 # Starship.rs initializer (to be at "end" of file, along with the following line)
 eval "$(starship init zsh)"
+
 
 # ########################### --ZSH Input Mods-- ####################### #
 # NOTE: location may change for a given installation
