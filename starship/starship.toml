@@ -1,0 +1,32 @@
+
+# ##Prompt##
+format = "$all"         # Default: "$all"
+#format = "$all$directory$character"
+#format = """
+#[┌───────────────────>](bold green)
+#[│](bold green)$directory$rust$package
+#[└─>](bold green) """
+
+right_format = ""       # Default: ""
+scan_timeout = 30       # Default: 30
+command_timeout = 500   # Default: 500
+add_newline = true      # Default: true
+
+[character]
+# success_symbol = "[❯](bold green)"
+# error_symbol = "[❯](bold red)"
+# vimcmd_symbol = "[❮](bold green)"
+vimcmd_symbol = """
+[    You hit ](green)[`esc`](bold red)[ - welcome to baby-vi's text navigation ](green)[<normal>](bold red) [mode.](green)
+[    Press ](green)[w](bold red)[, ](green)[b](bold red)[ to move forward or back a Word.](green)
+[    Use ](green)[c_](bold red)[/](green)[C](bold red)[, ](green)[d_](bold red)[/](green)[D](bold red)[ to change or delete text.](green)
+[    To return to default ](green)[<insert>](bold red)[ mode just press ](green)['i'](bold red)[.](green)
+[    \\(Tip: Set the mostly useless ](dimmed green)['Caps'](green)[ to ](dimmed green)['Esc'](green)[ to eventually hit vi-flow.\\)](dimmed green)
+[❮](bold green)"""
+
+[directory]
+truncate_to_repo = false
+truncation_length = 8           # Default: 4
+truncation_symbol = '.../'      # Default: ''
+repo_root_style = "bold blue"
+# repo_root_format = "[$before_root_path]($style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
