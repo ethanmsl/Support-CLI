@@ -6,3 +6,7 @@ github-copilot/**
 # ------- ZSH ------- 
 # zsh command history; could contain quasi-sensitive info
 **/.zsh_history
+
+# -----Other Shiz------
+iterm2/**
+.DS_Store

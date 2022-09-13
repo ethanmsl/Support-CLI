@@ -17,14 +17,15 @@ they'll probably tell you to do this:
 2. `brew install --cask wez/wezterm/wezterm` 
 
 ## (2b) Install ZSH Enhancements. 
-`starship zsh-autosuggestions zsh-syntax-highlighting`
+`brew install starship zsh-autosuggestions zsh-syntax-highlighting`
 
 ## (2c) Install Better Terminal Commands (basic set)  
 `brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
 NOTE: there are some follow-up instructions in many of those, I *think* we have you set, but some testing is due.  As is a quick *healthcheck* script to make sure things are in smooth.
 
 ## (2d) Install fonts
-`brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono fon-major-mono-display font-anonymous-pro`
+`brew brew tap homebrew/cask-fonts`
+`brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono font-major-mono-display font-anonymous-pro`
 
 ## (3) Set-Up DotFiles
 1. Clone repo into specific folder: `git clone git@github.com:ethanmsl/CLI-Starter.git ~/.config`
