@@ -20,18 +20,23 @@ they'll probably tell you to do this:
 `brew install starship zsh-autosuggestions zsh-syntax-highlighting`
 
 ## (2c) Install Better Terminal Commands (basic set)  
-`brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
+1. `brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
+2. `$(brew --prefix)/opt/fzf/install` |> you will be prompted to make some choices: respond '**y**' to all. :)  
+<img width="658" alt="fzf options install" src="https://user-images.githubusercontent.com/33399972/189989221-5aecdf06-7f74-44ff-ac6d-bfeed57ad4d5.png">
+
+
+
 NOTE: there are some follow-up instructions in many of those, I *think* we have you set, but some testing is due.  As is a quick *healthcheck* script to make sure things are in smooth.
 
 ## (2d) Install fonts
-`brew brew tap homebrew/cask-fonts`
-`brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono font-major-mono-display font-anonymous-pro`
+1. `brew tap homebrew/cask-fonts`
+2. `brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono font-major-mono-display font-anonymous-pro`
+
 
 ## (3) Set-Up DotFiles
 1. Clone repo into specific folder: `git clone git@github.com:ethanmsl/CLI-Starter.git ~/.config`
 2. Remove any `.zsh*` files from your `~` directory.  Check there are none: `ls ~/.zsh*`
 3. Symlink the zsh file that will say to look in that folder: `ln -s ~/.config/zsh/.zshenv ~/.zshenv`
-4. Remove some junk made in the earlier process: `rm ~/.zshprofile`
 
 ___________________________
 

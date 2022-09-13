@@ -1,8 +1,5 @@
 # ~/.config 's .gitignore
 
-# github-copilot folder only contains an authcode containing file for nvim
-github-copilot/**
-
 # ------- ZSH ------- 
 # zsh command history; could contain quasi-sensitive info
 **/.zsh_history
