@@ -1,37 +1,38 @@
 # Support-CLI-Starter
 ## NOTE: This is still in beta.  This README most particularly.
+______________________________________________
 
 
-## .config-dotfiles
-(.)dotfiles - localized to .config - requires symlinking .zshenv in order to add paths to some files in it
+# Main Steps:
 
-Will expand this later, but for now it is notable that this localization of (.)dotfiles depends on two things.
-1) exporting paths from `.zshenv` to point to many of the files that would otherwise be elsewhere (likely right in $HOME)
-2) symlinking `.zshenv` itself into $HOME so that it can both be found and git versioned.  
-  The command for that is: `ln -s ~/.config/zsh/.zshenv ~/.zshenv`
-
-
-
-## Install Brew (macOS package manager)
+## (1) Install Brew (macOS package manager)
 Go here: https://brew.sh/
 they'll probably tell you to do this:
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 , but you should go there and see what they say.
 
 
-## Install fonts
-`brew install --cask font-iosevka font-iosevka-slab font-iosevka-nerd-font font-syne-mono font-victor-mono font-victor-mono-nerd-font fon-major-mono-display font-anonymous-pro`
+## (2a) Install Terminal Emulator
+1. `brew tap wez/wezterm`
+2. `brew install --cask wez/wezterm/wezterm`
 
-## Install Better Terminal Commands (basic set)
+## (2b) Install ZSH Enhancements
+`starship zsh-autosuggestions zsh-syntax-highlighting`
+
+## (2c) Install Better Terminal Commands (basic set)
 `brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`
 NOTE: there are some follow-up instructions in many of those, I *think* we have you set, but some testing is due.  As is a quick *healthcheck* script to make sure things are in smooth.
 
-## Set-Up DotFiles
+## (2d) Install fonts
+`brew install --cask font-iosevka font-iosevka-slab font-iosevka-nerd-font font-syne-mono font-victor-mono font-victor-mono-nerd-font fon-major-mono-display font-anonymous-pro`
+
+## (3) Set-Up DotFiles
 1. Clone repo into specific folder: `git clone <repo-address> ~/.config`
 2. Remove any `.zsh*` files from your `~` directory.  Check there are none: `ls ~/.zsh*`
 3. Symlink the zsh file that will say to look in that folder: `ln -s ~/.config/zsh/.zshenv ~/.zshenv`
 4. Remove some junk made in the earlier process: `rm ~/.zshprofile`
 
+___________________________
 
 # Optional: 
 ## Install Neovim (there's a basic IDE-ready set-up almost ready to go if you want)
@@ -43,7 +44,8 @@ NOTE: there are some follow-up instructions in many of those, I *think* we have 
 ## Install Rust 
 Go here for install instructions: https://www.rust-lang.org/tools/Install
 They will probably be this: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
--------
+
+________________________________
 
 - Brief Overview
 	- Colors
@@ -74,10 +76,10 @@ They will probably be this: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rus
 		- fzf <~> !!!
 		- HELP
 			- man
-				man xxx-yyy
-			- XXX --help
+				- man xxx-yyy
 			- tldr XXX
 				- tldr xxx yyy
+			- XXX --help
 	- Wezterm
 		- fonts
 		- themes
@@ -111,4 +113,14 @@ They will probably be this: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rus
 		- bottom
 		- sd
 		- ripsecrets
+_________________________
 
+
+
+## .config-dotfiles
+(.)dotfiles - localized to .config - requires symlinking .zshenv in order to add paths to some files in it
+
+Will expand this later, but for now it is notable that this localization of (.)dotfiles depends on two things.
+1) exporting paths from `.zshenv` to point to many of the files that would otherwise be elsewhere (likely right in $HOME)
+2) symlinking `.zshenv` itself into $HOME so that it can both be found and git versioned.  
+  The command for that is: `ln -s ~/.config/zsh/.zshenv ~/.zshenv`
