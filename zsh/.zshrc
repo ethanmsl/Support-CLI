@@ -120,7 +120,7 @@ alias -g man='batman'
 alias g='git'
 
 alias ga='git add'
-alias gau='git add -u'  # git add all tracked && updated files
+alias gau='git add --update'  # git add all tracked && updated files
 alias grs='git restore --staged'  # un-stage files *specified*
 alias gkh='git checkout HEAD'  # return files to last commit state (¡does not preserve changes as unstaged!)
 
