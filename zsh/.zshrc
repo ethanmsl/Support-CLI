@@ -129,7 +129,7 @@ alias gba='git branch --all'  # also list remote branches
 alias gk='git checkout'
 
 alias gc='git commit'
-alias gcm='git commit -m'  # git commit along with commit message on line
+alias gcm='git commit --message'  # git commit along with commit message on line
 
 alias gd='git diff'
 alias gds='git diff --staged'
