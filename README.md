@@ -25,7 +25,7 @@ NOTE: there are some follow-up instructions in many of those, I *think* we have 
 
 ## (2d) Install fonts
 1. `brew tap homebrew/cask-fonts`
-2. `brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono fon-major-mono-display font-anonymous-pro`
+2. `brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono font-major-mono-display font-anonymous-pro`
 
 ## (3) Set-Up DotFiles
 1. Clone repo into specific folder: `git clone git@github.com:ethanmsl/CLI-Starter.git ~/.config`
