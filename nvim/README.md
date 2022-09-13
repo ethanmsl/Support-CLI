@@ -6,7 +6,7 @@ However, it's best that you take a look at the links below if you want to use it
 [Eh, TLDR:  
 1. go to plugins.lua and type `:w` to prompt plugin management
 2. anywhere, type `:TSUpdate` to start loading TreeSitter parsers
-3. LSPs (Language Servers): this is a slightly more involved issue. Python and JS are explained in the linked github (below), others needs to be manually added (but this is quite easy, though you'll need to understand how the plugins work)  
+3. LSPs (Language Servers): this is a slightly more involved issue. Python and JS are explained in the linked github (below), others needs to be manually added (but this is quite easy! :)  
 and, uh... *tada!*-ish :)  
 ]
 
