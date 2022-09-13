@@ -124,7 +124,7 @@ alias gds='git diff --staged'
 
 alias gf='git fetch'
 
-alias glg='git log --all --decorate --oneline --graph'
+alias glg='git log --all --decorate --oneline --graph'  # commit graph
 
 alias gm='git merge'
 
