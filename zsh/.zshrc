@@ -152,7 +152,7 @@ alias el='exa -ln -aF --header --icons --sort="type" --time-style="long-iso"'
 alias et='exa -aT --ignore-glob=".git" --icons --sort="type" --level=3'  # tree: max_depth 3
 alias etall='exa -aT --ignore-glob=".git" --icons --sort="type"'         # tree: unlimited depth
 
-# [ripgrep] rg... ~~()~~> rg
+# [ripgrep] rg... ~~()~~> "rg"
 # '-s' to add case sensitivity back
 alias -g rg='rg --hidden --ignore-case'
 # ^global to prevent silent fall back and subtle confusions that would ensue
