@@ -7,20 +7,20 @@ ______________________________________________
 
 ## (1) Install Brew (macOS package manager)
 Go here: https://brew.sh/
-they'll probably tell you to do this:
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+they'll probably tell you to do this:  
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`  
 , but you should go there and see what they say.
 
 
 ## (2a) Install Terminal Emulator
-1. `brew tap wez/wezterm`
-2. `brew install --cask wez/wezterm/wezterm`
+1. `brew tap wez/wezterm`  
+2. `brew install --cask wez/wezterm/wezterm` 
 
-## (2b) Install ZSH Enhancements
+## (2b) Install ZSH Enhancements. 
 `starship zsh-autosuggestions zsh-syntax-highlighting`
 
-## (2c) Install Better Terminal Commands (basic set)
-`brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`
+## (2c) Install Better Terminal Commands (basic set)  
+`brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
 NOTE: there are some follow-up instructions in many of those, I *think* we have you set, but some testing is due.  As is a quick *healthcheck* script to make sure things are in smooth.
 
 ## (2d) Install fonts
@@ -42,7 +42,7 @@ ___________________________
 `brew install node`
 
 ## Install Rust 
-Go here for install instructions: https://www.rust-lang.org/tools/Install
+Go here for install instructions: https://www.rust-lang.org/tools/Install  
 They will probably be this: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
 ________________________________
