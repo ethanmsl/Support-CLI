@@ -23,11 +23,11 @@ export FZF_DEFAULT_COMMAND='fd --type f --unrestricted --exclude .git'
     # / follow symlinkgs / exclude .git dirs
 
 # used when called as the keybinding 'Cntl+t'
-# <C+t>: search files FROM LOCAL DIR DOWN and drop chosen into commandline
+#   <C+t>: search files FROM $HOME DOWN and drop chosen into commandline
 export FZF_CTRL_T_COMMAND='fd --type f --unrestricted --exclude .git . $HOME'
 
 # used when called as the keybinding 'Alt+c'
-# <A+c>: search directories FROM $HOME DOWN and then cd to chosen
+#   <A+c>: search directories FROM $HOME DOWN and then cd to chosen
 export FZF_ALT_C_COMMAND='fd --type d --unrestricted --follow . $HOME'
     # use fd / type: dirs / show hidden & ignored (e.g. due to .gitignore)
     # / follow symlinkgs / exclude .git dirs / use $HOME as dir_argument
