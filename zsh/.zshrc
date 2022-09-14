@@ -136,7 +136,7 @@ alias gremv='git remote --verbose'
 
 alias gs='git status'
 
-alias gt='git ls-tree' # give content info about a git-tree
+alias gt='git ls-tree' # give content info about a git work-tree
 
 # ----------- neovim -----------
 # nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword AND 'nn' is apropos
