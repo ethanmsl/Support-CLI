@@ -82,16 +82,6 @@ _fzf_comprun() {
 }
 
 
-# ----------- set completion inputs for speicfic commands (fzf)  -----------
-# telling fzf-completion (**) wether to use files or directories
-# for various commands & aliases
-# TODO: either use custom_completions or find a way to make this work with zsh
-#       (not clear if it would work if run in a bash file)
-# ZSH ONLY
-# _fzf_setup_completion path nano nvim nn nv helix
-# _fzf_setup_completion dir c z
-
-#
 # ----------- source (fzf)  -----------
 # checks ("[ -f") if '.fzf.zsh' exists in ~ and then sources it if so
 # note: .fzf.zsh will have a reference to the location of the keybindings
