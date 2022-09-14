@@ -142,15 +142,24 @@ alias gt='git ls-tree' # give content info about a git-tree
 # nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword AND 'nn' is apropos
 alias nn='nvim'
 
+# # neovide --multigrid ~~()~~> "nv"
+# alias nv='neovide --multigrid'  # neovide is a GUI application for neovim
+
 # ----------- varied -----------
 # batman ~~()~~> "mab"
 alias mab='batman'
 
 # exa ~~()~~> "e"_fam  (~= "ls"_fam)
-alias es='exa -aF  --icons --sort="type"'
-alias el='exa -ln -aF --header --icons --sort="type" --time-style="long-iso"'
-alias et='exa -aT --ignore-glob=".git" --icons --sort="type" --level=3'  # tree: max_depth 3
-alias etall='exa -aT --ignore-glob=".git" --icons --sort="type"'         # tree: unlimited depth
+alias es='exa --all --classify  --icons --sort="type"'
+alias el='exa --long --numeric --all --classify --header --icons --sort="type" --time-style="long-iso"'
+alias et='exa --tree --all --ignore-glob=".git" --icons --sort="type" --level=3'  # tree: max_depth 3
+alias etall='exa --tree --all --ignore-glob=".git" --icons --sort="type"'         # tree: unlimited depth
+
+# fzf... ~~()~~> "fzf"
+# NOTE: fzf is involved enough to have its own file.
+#       See the "--fzf--" section (below) for source reference.
+#       Defined in that source file:
+# alias -g fzf --<with bat preview>
 
 # [ripgrep] rg... ~~()~~> "rg"
 # '-s' to add case sensitivity back
@@ -181,42 +190,14 @@ alias c='z'
 
 
 # ############################# --fzf-- ################################ #
-# Use fd (https://github.com/sharkdp/fd) instead of the default find
-# command for listing path candidates.
-# - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
-_fzf_compgen_path() {
-    fd --unrestricted --follow --exclude ".git" . "$1"
-    # use fd / show hidden & ignored (e.g. due to .gitignore)
-    # / follow symlinkgs / exclude .git dirs / dir_argument
-}
+# fzf is amazing, but uncharacteristically ...wide for a terminal app
+# below are multiple defaults that apply to various ways of calling
+# the underlying functionality.
+#
+# So, for organizational purposes, we've moved it to it's own file.
+# Which we simply source here. :)
 
-_fzf_compgen_dir() {
-    fd --type d --unrestricted --follow --exclude ".git" . "$1"
-    # use fd / type: dirs / show hidden & ignored (e.g. due to .gitignore)
-    # / follow symlinkgs / exclude .git dirs / dir_argument
-}
-
-export FZF_DEFAULT_COMMAND='fd --type f --unrestricted --exclude .git'
-    # use fd / type: files / show hidden & ignored (e.g. due to .gitignore)
-    # / follow symlinkgs / exclude .git dirs
-
-# <C+t>: search files FROM LOCAL DIR DOWN and drop chosen into commandline
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-# <A+c>: search directories FROM $HOME DOWN and then cd to chosen
-export FZF_ALT_C_COMMAND='fd --type d --unrestricted --follow . $HOME'
-    # use fd / type: dirs / show hidden & ignored (e.g. due to .gitignore)
-    # / follow symlinkgs / exclude .git dirs / use $HOME as dir_argument
-
-# default options for fzf
-export FZF_DEFAULT_OPTS='--multi --preview "bat --style=numbers --color=always --line-range :500 {}"'
-# enable multiple selection (with tab/shft+tab) 
-# / preview with bat command [/show lines numbers / use color / line range 1through 500]
-
-# checks ("[ -f") if '.fzf.zsh' exists in ~ and then sources it if so
-# note: .fzf.zsh will have a reference to the location of the keybindings
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.config/zsh/sources/fzf-call-settings.zsh
 
 
 # ############################ --Prompt-- ############################# #
