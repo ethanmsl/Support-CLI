@@ -73,7 +73,7 @@ _fzf_comprun() {
 
     # NOTE: uses input alias, not it's expansion (e.g. 'z' -!-> 'c')
     case "$command" in
-        cd|c|z)           fzf "$@" --preview 'exa --tree --all --ignore-glob=".git" {}' ;;
+        cd|c|z)       fzf "$@" --preview 'exa --tree --all --ignore-glob=".git" {}' ;;
         export|unset) fzf "$@" --preview "eval 'echo \$'{}" ;;
         ssh)          fzf "$@" --preview 'dig {}' ;;
         *)            fzf "$@" --multi --preview 'bat --style=numbers --color=always --line-range :500 {}' ;;
