@@ -1,5 +1,9 @@
 # Support-CLI-Starter
-## NOTE: This is still in beta.  This README most particularly.
+## NOTE: Documentation to come.  
+The below is only install instructions for beta-testers.
+
+## NOTE_2: The current repo is only set-up for post-Intel processors.
+some file paths are different between the two.  support coming
 ______________________________________________
 
 
