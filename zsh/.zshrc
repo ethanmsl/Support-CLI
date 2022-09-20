@@ -131,6 +131,11 @@ alias gf='git fetch'
 alias glg='git log --all --decorate --oneline --graph'  # commit graph
 
 alias gm='git merge'
+function gmpreview() {  # shows changes that would be merged
+    git diff ...$1      # from supplied_branch (<arg>) to current_branch (inferred)
+}
+# NOTE: comprison branch must be provided; hence a function to alow argument
+#       to be easily combined with '...' + ' <arg>'  ~~> '...<arg>'
 
 alias gpush='git push'  # minimally abbreviated due to similarity to 'git pull'
 alias gpull='git pull'
