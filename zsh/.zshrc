@@ -42,6 +42,10 @@ setopt auto_cd
 
 # try to correct command and all arguments on line
 setopt correct_all
+export CORRECT_IGNORE_FILE='.vim|.nvim|.git'
+# ^ list of *replacements* to NOT offer for correct_*all*
+#   if you want to add anything to this list just add "|<the_correction>"
+#   to the above
 
 # all cd actions add last location to a stack (can used 'popd' to de-stack and travel to location)
 setopt auto_pushd
