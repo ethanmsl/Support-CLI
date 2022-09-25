@@ -117,7 +117,9 @@ alias grs='git restore --staged'  # un-stage files *specified*
 alias gkh='git checkout HEAD'  # return files to last commit state (¡does not preserve changes as unstaged!)
 
 alias gb='git branch'  # git list all branches if no further elaboration
-alias gba='git branch --all'  # also list remote branches
+alias gba='git branch --all --verbose --verbose' # also list:
+#                           remote branches, last commit, and tracking branch
+#                           (double '--verbose' is needed for last one)
 alias gk='git checkout'
 
 alias gc='git commit'
