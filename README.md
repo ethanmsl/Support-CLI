@@ -7,7 +7,7 @@ some file paths are different between the two.  support coming
 ______________________________________________
 
 
-# Main Steps:
+# Installation Steps:
 
 ## (1) Install Brew (macOS package manager)
 Go here: https://brew.sh/
@@ -53,6 +53,10 @@ ___________________________
 ## Install Rust 
 Go here for install instructions: https://www.rust-lang.org/tools/Install  
 They will probably be this: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+
+# Primary CLI Learning Reference:
+[Software Carpentry: The Unix Shell](https://swcarpentry.github.io/shell-novice/)
+(covers BASH, but applies to ZSH)
 
 ________________________________
 

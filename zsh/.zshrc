@@ -120,6 +120,8 @@ alias gb='git branch'  # git list all branches if no further elaboration
 alias gba='git branch --all --verbose --verbose' # also list:
 #                           remote branches, last commit, and tracking branch
 #                           (double '--verbose' is needed for last one)
+alias gbv='git branch --verbose --verbose' # last commit & tracking branch
+#                                            (double '--verbose' is needed)
 alias gk='git checkout'
 
 alias gc='git commit'
