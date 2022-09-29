@@ -1,8 +1,17 @@
 #!/bin/zsh
 
 
-# ########################### --ViMode Cursor Shape-- ####################### #
+# ########################### --ViMode Set-Up ####################### #
 
+bindkey -v  # set vi-mode
+bindkey -v '^?' backward-delete-char  # enable typical backspace in insert mode
+export KEYTIMEOUT=1  # set wait time for possible multi-char sequences to 
+                     # 1/100th of a second (0.01 seconds == 10ms)
+                     # increases responsiveness when using escape to switch to
+                     # <normal> mode
+
+
+# ########################### --ViMode Cursor Shape-- ####################### #
 
 # ----------- Cursor-Change with Mode-Change -----------
 # Change cursor shape for different vi modes.

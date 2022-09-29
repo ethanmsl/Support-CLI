@@ -51,10 +51,28 @@ export CORRECT_IGNORE_FILE='.vim|.nvim|.git'
 setopt auto_pushd
 
 # enable vi mode, increase visual responsiveness, load cursor change code
-bindkey -v
-bindkey -v '^?' backward-delete-char  # enable typical backspace in insert mode
-export KEYTIMEOUT=1
-source ~/.config/zsh/sources/cursor-reflect-vimode.zsh
+source ~/.config/zsh/sources/enhanced-vimode-setup.zsh
+# ^ because there's enough going on in our set-up of vi-mode rather than
+# dump all that info here, we've kept things clean and modular by putting that
+# code in a separate file and then just calling it from here!
+# if you're using something like NeoVim or VSCode you'll be able to easily
+# open that file from this one if you have a project view open or LSP ready.
+# (or just using <gf> for go to file on the path in default NeoVim or Vim)
+#
+# Quick lesson: "source" just takes a path to a ZSH file and then looks for and
+#               runs it. (almost like it were in this file)
+#               (Options also exist to allow sourcing other *SH files.)
+#
+# NOTE: you will see both
+#           1) "source <some_path>"
+#           2) ". <some_path>"
+#       in various contexts.
+#       In ZSH "." and "source" are **almost** the same thing.
+#       They differ slightly in the where the file looks *first*
+#       (locally or in established $PATH - "source" & ".", resp.)
+#   Handy documentation references:
+#       "source": https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html#index-source
+#       ".": https://zsh.sourceforge.io/Doc/Release/Shell-Builtin-Commands.html#index-dot
 
 # default editor
 # "VISUAL" and "EDITOR" usually substitutable, best to set both to same
