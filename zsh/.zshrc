@@ -52,6 +52,7 @@ setopt auto_pushd
 
 # enable vi mode, increase visual responsiveness, load cursor change code
 bindkey -v
+bindkey -v '^?' backward-delete-char  # enable typical backspace in insert mode
 export KEYTIMEOUT=1
 source ~/.config/zsh/sources/cursor-reflect-vimode.zsh
 
