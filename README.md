@@ -2,8 +2,9 @@
 ## NOTE: Documentation to come.  
 The below is only install instructions for beta-testers.
 
-## NOTE_2: The current repo is only set-up for post-Intel processors.
-some file paths are different between the two.  support coming
+## NOTE_2: The current branch (`main`) is only set-up for *post*-Intel processors.  
+see the `intel` branch for a proposed (to be tested) intel-compatible set of files.  
+(basically brew installs things in a different place on Intel vs M1 architectures is all, and some sourcing paths are different)
 ___________________________
 
 # Primary CLI Learning Reference:
