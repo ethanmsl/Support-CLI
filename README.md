@@ -1,6 +1,7 @@
 # Support-CLI-Starter
 ## NOTE: Documentation to come.  
-The below is only install instructions for beta-testers.
+The below is almost exclusively install instructions for beta-testers.
+(Though the Software Carpentry link directly below is amazing if you don't have unix-y cli experience and want to get started with this.)
 
 ## NOTE_2: The current branch (`main`) is only set-up for *post*-Intel processors.  
 see the `intel` branch for a proposed (to be tested) intel-compatible set of files.  
