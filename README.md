@@ -4,6 +4,16 @@ The below is only install instructions for beta-testers.
 
 ## NOTE_2: The current repo is only set-up for post-Intel processors.
 some file paths are different between the two.  support coming
+___________________________
+
+# Primary CLI Learning Reference:
+- [Software Carpentry: The Unix Shell](https://swcarpentry.github.io/shell-novice/)
+(covers BASH, but applies to ZSH)
+
+## Helpful Resources:
+- [ExplainShell](https://explainshell.com/): feed it a command and get it broken down! Useful for basic command arguments and context.  (won't parse more involved syntax of arguments to things like `sed`)
+- [TLDR Pages](https://tldr.ostera.io/) - we install (below) a CLI tool to do this (e.g. type `tldr mkdir`), but if you don't have that these pages are great!
+- [SC: Unix Summary](https://swcarpentry.github.io/shell-novice/reference): just a overview of the Software Carpentry lessons above.  Good for a quick reminder peak.
 ______________________________________________
 
 
@@ -41,9 +51,8 @@ NOTE: there are some follow-up instructions in many of those, I *think* we have 
 2. Remove any `.zsh*` files from your `~` directory.  Check there are none: `ls ~/.zsh*`
 3. Symlink the zsh file that will say to look in that folder: `ln -s ~/.config/zsh/.zshenv ~/.zshenv`
 
-___________________________
-
-# Optional: 
+________________________
+# Optional Installations: 
 ## Install Neovim (there's a basic IDE-ready set-up almost ready to go if you want)
 `brew install neovim`
 
@@ -53,15 +62,6 @@ ___________________________
 ## Install Rust 
 Go here for install instructions: https://www.rust-lang.org/tools/Install  
 They will probably be this: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-
-# Primary CLI Learning Reference:
-[Software Carpentry: The Unix Shell](https://swcarpentry.github.io/shell-novice/)
-(covers BASH, but applies to ZSH)
-
-## Helpful Resources:
-- [ExplainShell](https://explainshell.com/): feed it a command and get it broken down! Useful for basic command arguments and context.  (won't parse more involved syntax of arguments to things like `sed`)
-- [TLDR Pages](https://tldr.sh/) - we installed a CLI tool to do this (e.g. type `tldr mkdir`), but if you don't have that these pages are great!
-- [SC: Unix Summary](https://swcarpentry.github.io/shell-novice/reference): just a overview of the Software Carpentry lessons above.  Good for a quick reminder peak.
 
 ________________________________
 
