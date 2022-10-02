@@ -25,7 +25,8 @@ ______________________________________________
 Go here: https://brew.sh/
 they'll probably tell you to do this:  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`  
-, but you should go there and see what they say.
+, but you should go there and see what they say.  
+(Note: if you haven't installed "xcode-select" [bunch of commandline tools bundled on mac, including **git**] then you'll be prompted that that installation will take place during the brew install -- that's chill, no worries.)
 
 
 ## (2a) Install Terminal Emulator
