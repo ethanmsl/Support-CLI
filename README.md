@@ -1,11 +1,14 @@
 # Support-CLI-Starter
 ## NOTE: Documentation to come.  
-The below is almost exclusively install instructions for beta-testers.  
+The below is almost exclusively install instructions for beta-testers.
 (Though the Software Carpentry link directly below is amazing if you don't have unix-y cli experience and want to get started with this.)
 
 ## NOTE_2: you are looking at the untested `intel` *branch*
 This is for pre-M1 macs.  (the `main` branch is for M1+ macs).  
 The difference is simply in some install paths, but the `intel` branch has yet to be tested.
+||||||| 52c57c4
+## NOTE_2: The current repo is only set-up for post-Intel processors.
+some file paths are different between the two.  support coming
 ___________________________
 
 # Primary CLI Learning Reference:
@@ -25,7 +28,8 @@ ______________________________________________
 Go here: https://brew.sh/
 they'll probably tell you to do this:  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`  
-, but you should go there and see what they say.
+, but you should go there and see what they say.  
+(Note: if you haven't installed "xcode-select" [bunch of commandline tools bundled on mac, including **git**] then you'll be prompted that that installation will take place during the brew install -- that's chill, no worries.)
 
 
 ## (2a) Install Terminal Emulator
