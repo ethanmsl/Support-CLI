@@ -34,7 +34,7 @@ they'll probably tell you to do this:
 2. `brew install --cask wez/wezterm/wezterm` 
 
 ## (2b) Install ZSH Enhancements. 
-`starship zsh-autosuggestions zsh-syntax-highlighting`
+`brew install starship zsh-autosuggestions zsh-syntax-highlighting`
 
 ## (2c) Install Better Terminal Commands (basic set)  
 1. `brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
