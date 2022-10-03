@@ -91,7 +91,29 @@ export VISUAL='nano'
 #               this can be corrected by globaling the alias, with the caveat
 #               that that letter word will *always* expand
 #
-#  SEE: `which <alias>` to find what something is aliased to
+# NOTE: `which <alias>` to find what something is aliased to
+#        e.g. ``` ❯ which gs
+#                 gs: aliased to git status  ```
+#        'which' might seem like a funny command name, vs, say,'definition'.
+#        The context was, presumably in disambiguiating *which* instance of a
+#        command that was duplicated in the $PATH was being used
+#        ('$PATH' is the main list of places your shell looks for stuff.)
+#        e.g. "python3" could have been installed in two different places.
+#             Maybe it was installed by default on some system and then you
+#             installed your own.
+#             so there could be two paths:
+#             `~/python/python3` & `/usr/bin/python3`
+#             when you type the command "python3" what happens is the machine
+#             looks through the $PATH and finds the some instance of 'python3'
+#             and then runs that.
+#       If you were worried that this might be happening or knew it was but
+#       wanted to know **which** version 'python3' calls you could then use:
+#           'which python3'
+#       and get told "which" of the python3 paths is being used.
+#
+#       `which <alias>` ~~~> definition
+#       seems to be an extension of that functionality.
+#       Hence, in this imagined history, the slightly off-seeming name.
 
 # ----------- **shadow** aliases (WoooOOOooo) -----------
 # I'm including these aliases for simplicity of adoption and to assist
