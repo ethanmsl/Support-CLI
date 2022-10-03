@@ -93,7 +93,7 @@ export VISUAL='nano'
 #
 #  SEE: `which <alias>` to find what something is aliased to
 
-# ----------- shadow aliases (WoooOOOooo) -----------
+# ----------- **shadow** aliases (WoooOOOooo) -----------
 # I'm including these aliases for simplicity of adoption and to assist
 # with learning classic terminal commands
 # I also have non-shadowed versions below
@@ -107,68 +107,44 @@ export VISUAL='nano'
 alias -g ls='exa --all'
 alias -g ll='exa --all --long'
 alias -g lt='exa --all --tree --level=3'
-alias -g tree='exa --all --tree --level=6'
+alias -g tree='exa --all --tree --level=6'  # 'tree' is a common cli command, 
+                                            # though not pre-installed on mac
 
 # ----- cat, but with color -----
 alias -g cat='bat --paging=never'
 
 # ----- man(pages), but with color -----
 alias -g man='batman'
+# NOTE: some commands do not have man pages, but often will respond to
+#       '<command> --help'
+#       when that help has man-like syntax we can simulate 'batman' 
+#       by piping the help docs into our colored pager
+#       '<command> --help | bat' (or, with shadowing: '<command> --help | cat')
 
 # NOTE: three replacement commands are *NOT* shadowed here
 #       they take different syntax
 #       'rg' (ripgrep) mostly replaces 'grep', but has different syntax
-#       'c'/'z' (zoxide) mostly replace 'cd', but fuzzy corrects to closest visisted dir
+#       'c'/'z' (zoxide) mostly replace 'cd', but fuzzy corrects to closest visited dir
 #       'fd' mostly replaces 'find', but has different syntax
 #       (and not included as defaults in our repo, but 'sd' vs 'sed': same deal)
 # ---------------------------
 
 # ----------- git -----------
 # git ~~()~~> "g"
+# NOTE: as/if you use the terminal more frequently you will find there are some
+#       commands that are verbose relative to how often you use them.
+#       You're no prisoner!  You can define your own vocabulary!
+#       A common example of this is the git family of commands.
+#       A list of simplified aliases for common commands is loaded in below.
+#
+#       It would be perfectly natural to have here, but to (a) keep this file
+#       more legible to diverse backgrounds and (b) make removal doubly easy
+#       (as many people will already have their own custom argot).
+#       But please take a look for an example of making easy what YOU use.
+source ~/.config/zsh/sources/git-aliases.zsh
 # NOTE: similar, but different aliasing can be set in '.gitconfig'
 #       those aliases are for the arguments that *follow* the 'git ' command
-
-alias g='git'
-
-alias ga='git add'
-alias gau='git add --update'  # git add all tracked && updated files
-alias grs='git restore --staged'  # un-stage files *specified*
-alias gkh='git checkout HEAD'  # return files to last commit state (¡does not preserve changes as unstaged!)
-
-alias gb='git branch'  # git list all branches if no further elaboration
-alias gba='git branch --all --verbose --verbose' # also list:
-#                           remote branches, last commit, and tracking branch
-#                           (double '--verbose' is needed for last one)
-alias gbv='git branch --verbose --verbose' # last commit & tracking branch
-#                                            (double '--verbose' is needed)
-alias gk='git checkout'
-
-alias gc='git commit'
-alias gcm='git commit --message'  # git commit along with commit message on line
-
-alias gd='git diff'
-alias gds='git diff --staged'
-
-alias gf='git fetch'
-
-alias glg='git log --all --decorate --oneline --graph'  # commit graph
-
-alias gm='git merge'
-function gmpreview() {  # shows changes that would be merged
-    git diff ...$1      # from supplied_branch (<arg>) to current_branch (inferred)
-}
-# NOTE: comprison branch must be provided; hence a function to alow argument
-#       to be easily combined with '...' + ' <arg>'  ~~> '...<arg>'
-
-alias gpush='git push'  # minimally abbreviated due to similarity to 'git pull'
-alias gpull='git pull'
-
-alias grem='git remote'
-alias gremv='git remote --verbose'
-
-alias gs='git status'
-
-alias gt='git ls-tree' # give content info about a git work-tree
+#       whereas the above are for the whole train.
 
 # ----------- neovim -----------
 # nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword AND 'nn' is apropos
