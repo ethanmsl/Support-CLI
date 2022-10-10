@@ -40,15 +40,19 @@ export HISTFILE=$HOME/.zsh_history
 # set cd'ing with just directory names typed in
 setopt auto_cd
 
+# all cd actions add last location to a stack (can used 'popd' to de-stack and travel to location)
+setopt auto_pushd
+
+# don't play 'BEEP' sound when asked for non-definite completion
+# (e.g. if you type 'cd .z[tab]' in a folder with '.zshrc' and '.zshenv' in it)
+unsetopt LIST_BEEP
+
 # try to correct command and all arguments on line
 setopt correct_all
 export CORRECT_IGNORE_FILE='.vim|.nvim|.git'
 # ^ list of *replacements* to NOT offer for correct_*all*
 #   if you want to add anything to this list just add "|<the_correction>"
 #   to the above
-
-# all cd actions add last location to a stack (can used 'popd' to de-stack and travel to location)
-setopt auto_pushd
 
 # enable vi mode, increase visual responsiveness, load cursor change code
 source ~/.config/zsh/sources/enhanced-vimode-setup.zsh
