@@ -197,6 +197,10 @@ alias etall='exa --tree --all --ignore-glob=".git" --icons --sort="type"'       
 #       Defined in that source file:
 # alias -g fzf --<with bat preview>
 
+# de-verbosing the common call to python(3)
+# python3 ~~()~~> "py"
+alias py='python3'
+
 # [ripgrep] rg... ~~()~~> "rg"
 # '-s' to add case sensitivity back
 alias -g rg='rg --hidden --ignore-case'
