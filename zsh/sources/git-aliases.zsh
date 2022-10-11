@@ -37,6 +37,7 @@ alias ginit='git init'
 
 alias glog='git log'
 alias glg='git log --all --decorate --oneline --graph'  # commit graph
+alias glgv='git log --all --decorate --graph'           # "      "     verbose
 
 alias gm='git merge'
 function gmpreview() {  # shows changes that would be merged
