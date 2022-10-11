@@ -10,6 +10,7 @@ alias g='git'
 
 alias ga='git add'
 alias gau='git add --update'  # git add all tracked && updated files
+alias gr='git restore'  # restore files (with unstaged changes) *specified*
 alias grs='git restore --staged'  # un-stage files *specified*
 alias gkh='git checkout HEAD'  # return files to last commit state (¡does not preserve changes as unstaged!)
 
