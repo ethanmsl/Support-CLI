@@ -173,8 +173,10 @@ source ~/.config/zsh/sources/git-aliases.zsh
 #       whereas the above are for the whole train.
 
 # ----------- neovim -----------
-# nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword AND 'nn' is apropos
-alias nn='nvim'
+# leaving these here for possible future use (by repo or you, personalyl:)
+
+# nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword AND 'nn' is apropos ;)
+# alias nn='nvim'
 
 # # neovide --multigrid ~~()~~> "nv"
 # alias nv='neovide --multigrid'  # neovide is a GUI application for neovim
