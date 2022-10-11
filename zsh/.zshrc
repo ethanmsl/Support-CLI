@@ -173,8 +173,10 @@ source ~/.config/zsh/sources/git-aliases.zsh
 #       whereas the above are for the whole train.
 
 # ----------- neovim -----------
-# nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword AND 'nn' is apropos
-alias nn='nvim'
+# leaving these here for possible future use (by repo or you, personalyl:)
+
+# nvim ~~()~~> "nn" Note: "nm" is a prexisting keyword AND 'nn' is apropos ;)
+# alias nn='nvim'
 
 # # neovide --multigrid ~~()~~> "nv"
 # alias nv='neovide --multigrid'  # neovide is a GUI application for neovim
@@ -194,6 +196,10 @@ alias etall='exa --tree --all --ignore-glob=".git" --icons --sort="type"'       
 #       See the "--fzf--" section (below) for source reference.
 #       Defined in that source file:
 # alias -g fzf --<with bat preview>
+
+# de-verbosing the common call to python(3)
+# python3 ~~()~~> "py"
+alias py='python3'
 
 # [ripgrep] rg... ~~()~~> "rg"
 # '-s' to add case sensitivity back

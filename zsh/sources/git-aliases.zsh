@@ -26,9 +26,16 @@ alias gcm='git commit --message'  # git commit along with commit message on line
 
 alias gd='git diff'
 alias gds='git diff --staged'
+function gdback() {  # git diff against N commits ago
+    git diff HEAD~$1 HEAD  # HEAD~X <-- head x commits ago
+}
+# NOTE: function used to syntatically allow concatination of argument
 
 alias gf='git fetch'
 
+alias ginit='git init'
+
+alias glog='git log'
 alias glg='git log --all --decorate --oneline --graph'  # commit graph
 
 alias gm='git merge'
