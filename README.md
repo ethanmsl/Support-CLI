@@ -3,7 +3,7 @@
 The below is almost exclusively install instructions for beta-testers.
 (Though the Software Carpentry link directly below is amazing if you don't have unix-y cli experience and want to get started with this.)
 
-## NOTE_2: you are looking at the untested `intel` *branch*
+## NOTE_2: you are looking at the ~~un~~tested `intel` *branch*
 This is for pre-M1 macs.  (the `main` branch is for M1+ macs).  
 The difference is simply in some install paths, but the `intel` branch has yet to be tested.
 ||||||| 52c57c4
