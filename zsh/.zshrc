@@ -181,6 +181,12 @@ source ~/.config/zsh/sources/git-aliases.zsh
 # # neovide --multigrid ~~()~~> "nv"
 # alias nv='neovide --multigrid'  # neovide is a GUI application for neovim
 
+# ----------- Python -----------
+# python3 ~~()~~> "py"
+# <venv _> ~~()~~> "vpy_"
+# poetry _ ~~()~~> "poet_"
+source ~/.config/zsh/sources/python-aliases.zsh
+
 # ----------- varied -----------
 # batman ~~()~~> "mab"
 alias mab='batman'
