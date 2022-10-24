@@ -30,6 +30,9 @@ alias gbv='git branch --verbose --verbose' # last commit & tracking branch
 alias gk='git checkout'
 alias gkh='git checkout HEAD'  # return files to last commit state (¡does not preserve changes as unstaged!)
 
+#       clone
+alias gclone='git clone'
+
 #       commit
 alias gc='git commit'
 alias gcm='git commit --message'  # git commit along with commit message on line
