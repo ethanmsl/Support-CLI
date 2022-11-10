@@ -23,23 +23,23 @@ alias vpyoff='deactivate'
 alias poet='poetry'
 
 #       add
-alias poeta='echo "did you mean '"'poetau(usr)'"' or '"'poetav(dev)'"'?\nOtherwise, please use '"'poet add ... --.. --..'"'."'
+alias poeta='echo "did you mean '"'poetau(usr)'"' or '"'poetadv(dev)'"'?\nOtherwise, please use '"'poet add ... --.. --..'"'."'
 alias poetau='poetry add'
-alias poetav='poetry add --group=dev'
+alias poetadv='poetry add --group=dev'
 
 #       check
-alias poetchk='poetry check'
+alias poetck='poetry check'
 
 #       export
 alias poetexp='poetry export'
 alias poetreq='poetry export --format=requirements.txt'
-alias poetreqout='poetry export --format=requirements.txt --output=requirements.txt'
+alias poetreqwrite='poetry export --format=requirements.txt --output=requirements.txt'
 # Note: we can use 'poetreq' alongside '> requirements.txt' or use the given
 #       syntax via 'poetreqout': ''--output=...'
 
 #       init & install
 alias poetini="poetry init"
-alias poetinst='poetry install'
+alias poetinstall='poetry install'
 
 #       list & lock
 alias poetlist='poetry list'
@@ -51,8 +51,9 @@ alias poetn='echo "did you mean '"'poetns'"', i.e. '"'poetry new --src'"'?"'
 alias poetns='poetry new --src'
 
 #       shell & show
-alias poetshow='poetry shell'
-alias poetshow='poetry shell'
+alias poets='poetry shell'
+alias poetshll='poetry shell'
+alias poetswt='poetry show --tree'
 
 #       remove & run
 alias poetrem='poetry remove'
@@ -60,4 +61,3 @@ alias poetrun='poetry run'
 
 #       update
 alias poetup='poetry update'
-
