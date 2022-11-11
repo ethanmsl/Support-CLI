@@ -68,9 +68,11 @@ function gmpreview() {  # shows changes that would be merged
 alias gpush='git push'  # minimally abbreviated due to similarity to 'git pull'
 alias gpull='git pull'
 
-#       remote
+#       remote & remove
 alias grem='git remote'
 alias gremv='git remote --verbose'
+alias grm='echo "Did you mean '"'grmc'"' for '"'git rm --cached'"'?\nAlternatively, please use the explicit '"'git rm'"' for both file deletion and de-tracking"'
+alias grmc='git rm --cached'
 
 #       status
 alias gs='git status'
