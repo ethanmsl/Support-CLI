@@ -35,6 +35,11 @@ export GIT_CONFIG_GLOBAL=$HOME/.config/git_global/.gitconfig
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH
 
+# ----------- Python -----------
+# Poetry is being used for virtual-env and dependency managment
+# I am moving its config files to coreside with other core "dot"files
+export POETRY_CONFIG_DIR=$HOME/.config/pypoetry
+
 # ----------- Rust ----------- 
 export PATH=$PATH:$HOME/.cargo/bin
 

@@ -3,3 +3,8 @@
 # ------- ZSH ------- 
 # zsh command history; could contain quasi-sensitive info
 **/.zsh_history
+
+# ------- PyPoetry ------- 
+# poetry.lock & pyproject.toml will contain user and instance specific info
+pypoetry/poetry.lock
+pypoetry/pyproject.toml
