@@ -56,7 +56,7 @@ alias poetshll='poetry shell'
 alias poetswt='poetry show --tree'
 
 #       remove & run
-alias poetrem='poetry remove'
+alias poetrm='poetry remove'
 alias poetrun='poetry run'
 
 #       update
