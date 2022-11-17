@@ -37,7 +37,7 @@ they'll probably tell you to do this:
 `brew install starship zsh-autosuggestions zsh-syntax-highlighting`
 
 ## (2c) Install Better Terminal Commands (basic set)  
-1. `brew install bat git-delta choose-rust exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
+1. `brew install bat git-delta choose-rust exa fd fzf ripgrep sd tealdeer zoxide eth-p/software/bat-extras-batman`   
 2. `$(brew --prefix)/opt/fzf/install` |> you will be prompted to make some choices: respond '**y**' to all. :)  
 <img width="658" alt="fzf options install" src="https://user-images.githubusercontent.com/33399972/189989221-5aecdf06-7f74-44ff-ac6d-bfeed57ad4d5.png">
 
