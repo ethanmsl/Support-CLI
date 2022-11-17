@@ -6,9 +6,6 @@ The below is almost exclusively install instructions for beta-testers.
 ## NOTE_2: you are looking at the ~~un~~tested `intel` *branch*
 This is for pre-M1 macs.  (the `main` branch is for M1+ macs).  
 The difference is simply in some install paths, but the `intel` branch has yet to be tested.
-||||||| 52c57c4
-## NOTE_2: The current repo is only set-up for post-Intel processors.
-some file paths are different between the two.  support coming
 ___________________________
 
 # Primary CLI Learning Reference:
@@ -40,7 +37,7 @@ they'll probably tell you to do this:
 `brew install starship zsh-autosuggestions zsh-syntax-highlighting`
 
 ## (2c) Install Better Terminal Commands (basic set)  
-1. `brew install bat git-delta exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
+1. `brew install bat git-delta choose-rust exa fd fzf ripgrep tealdeer zoxide eth-p/software/bat-extras-batman`   
 2. `$(brew --prefix)/opt/fzf/install` |> you will be prompted to make some choices: respond '**y**' to all. :)  
 <img width="658" alt="fzf options install" src="https://user-images.githubusercontent.com/33399972/189989221-5aecdf06-7f74-44ff-ac6d-bfeed57ad4d5.png">
 
