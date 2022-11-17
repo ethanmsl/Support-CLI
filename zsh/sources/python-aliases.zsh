@@ -27,7 +27,9 @@ alias poeta='echo "did you mean '"'poetau(usr)'"' or '"'poetadv(dev)'"'?\nOtherw
 alias poetau='poetry add'
 alias poetadv='poetry add --group=dev'
 
-#       check
+#       cache & check
+# alias poetcc='poetry cache clear'
+# # ^not working correctly as of XI-16-'22 : see 'workarounds' below
 alias poetck='poetry check'
 
 #       export
@@ -61,3 +63,7 @@ alias poetrun='poetry run'
 
 #       update
 alias poetup='poetry update'
+
+#       workarounds
+alias poethashnotfoundworkaround='rg "not found in known hashes" | choose -f "archive" 1 | choose 0 | xargs -I_ fd _ $POETRY_CACHE_DIR | xargs -o rm -i'
+# ^ pipe input from something complaining about hash not found -- to get problem item and (with confirmation) remove it

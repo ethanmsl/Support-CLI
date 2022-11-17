@@ -17,7 +17,7 @@
 # ########################## --Path Exports-- ###################### #
 # ----------- ZSH ----------- 
 export ZDOTDIR=$HOME/.config/zsh
-export HISTFILE=$HOME/.zsh_history
+export HISTFILE=$HOME/.zsh_history  # default
 # sets the xsh_history file in its typical location, preventing it from
 # being placed in our git versioned  ZSH/ directory (due to $ZDOTDIR setting in .zshenv)
 
@@ -32,16 +32,18 @@ export GIT_CONFIG_GLOBAL=$HOME/.config/git_global/.gitconfig
 
 # ----------- Go ----------- 
 # note: these came up when trying to make the PagerDuty-Terraform Provider
-export GOPATH=$HOME/go
+export GOPATH=$HOME/go  #default
 export PATH=$PATH:$GOPATH
 
 # ----------- Python -----------
 # Poetry is being used for virtual-env and dependency managment
 # I am moving its config files to coreside with other core "dot"files
 export POETRY_CONFIG_DIR=$HOME/.config/pypoetry
+export POETRY_CACHE_DIR=$HOME/Library/Caches/pypoetry  # default
+export POETRY_DATA_DIR=$HOME/Library/Application\ Support/pypoetry  # default
 
 # ----------- Rust ----------- 
-export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.cargo/bin  # default
 
 
 # ########################## --Environment Sourcing-- ###################### #
