@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 # Support-CLI-Starter
 ## NOTE: Documentation to come.  
 The below is almost exclusively install instructions for beta-testers.
@@ -24,21 +34,36 @@ ______________________________________________
 ## (1) Install Brew (macOS package manager)
 Go here: https://brew.sh/
 they'll probably tell you to do this:  
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`  
+```zsh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```  
 , but you should go there and see what they say.  
 (Note: if you haven't installed "xcode-select" [bunch of commandline tools bundled on mac, including **git**] then you'll be prompted that that installation will take place during the brew install -- that's chill, no worries.)
 
 
 ## (2a) Install Terminal Emulator
-1. `brew tap wez/wezterm`  
-2. `brew install --cask wez/wezterm/wezterm` 
+1. 
+```zsh
+brew tap wez/wezterm
+```  
+2. 
+```zsh
+brew install --cask wez/wezterm/wezterm
+``` 
 
 ## (2b) Install ZSH Enhancements. 
 `brew install starship zsh-autosuggestions zsh-syntax-highlighting`
 
 ## (2c) Install Better Terminal Commands (basic set)  
-1. `brew install bat git-delta choose-rust exa fd fzf ripgrep sd tealdeer zoxide eth-p/software/bat-extras-batman`   
-2. `$(brew --prefix)/opt/fzf/install` |> you will be prompted to make some choices: respond '**y**' to all. :)  
+1. 
+```zsh
+brew install bat choose-rust git-delta exa fd fzf ripgrep sd tealdeer zoxide eth-p/software/bat-extras-batman
+```   
+2. 
+```zsh
+$(brew --prefix)/opt/fzf/install
+```
+|> you will be prompted to make some choices: respond '**y**' to all. :)  
 <img width="658" alt="fzf options install" src="https://user-images.githubusercontent.com/33399972/189989221-5aecdf06-7f74-44ff-ac6d-bfeed57ad4d5.png">
 
 
@@ -46,25 +71,22 @@ they'll probably tell you to do this:
 NOTE: there are some follow-up instructions in many of those, I *think* we have you set, but some testing is due.  As is a quick *healthcheck* script to make sure things are in smooth.
 
 ## (2d) Install fonts
-1. `brew tap homebrew/cask-fonts`
-2. `brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono font-major-mono-display font-anonymous-pro`
+1. 
+```zsh
+brew tap homebrew/cask-fonts
+```
+2. 
+```zsh
+brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono font-major-mono-display font-anonymous-pro
+```
 
 ## (3) Set-Up DotFiles
-1. Clone repo into specific folder: `git clone -b intel git@github.com:ethanmsl/CLI-Starter.git ~/.config`
+1. Clone repo into specific folder: 
+```zsh
+git clone -b intel git@github.com:ethanmsl/CLI-Starter.git ~/.config
+```
 2. Remove any `.zsh*` files from your `~` directory.  Check there are none: `ls ~/.zsh*`
 3. Symlink the zsh file that will say to look in that folder: `ln -s ~/.config/zsh/.zshenv ~/.zshenv`
-
-________________________
-# Optional Installations: 
-## Install Neovim (there's a basic IDE-ready set-up almost ready to go if you want)
-`brew install neovim`
-
-## Install Node
-`brew install node`
-
-## Install Rust 
-Go here for install instructions: https://www.rust-lang.org/tools/Install  
-They will probably be this: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
 
 ________________________________
 
@@ -144,4 +166,7 @@ _________________________
 Will expand this later, but for now it is notable that this localization of (.)dotfiles depends on two things.
 1) exporting paths from `.zshenv` to point to many of the files that would otherwise be elsewhere (likely right in $HOME)
 2) symlinking `.zshenv` itself into $HOME so that it can both be found and git versioned.  
-  The command for that is: `ln -s ~/.config/zsh/.zshenv ~/.zshenv`
+  The command for that is: 
+  ```zsh
+  ln -s ~/.config/zsh/.zshenv ~/.zshenv
+  ```
