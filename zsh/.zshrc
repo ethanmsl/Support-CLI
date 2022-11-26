@@ -203,6 +203,8 @@ alias fd='fd --hidden'
 # fzf... ~~()~~> "fzf"
 # NOTE: fzf is involved enough to have its own file.
 #       See the "--fzf--" section (below) for source reference.
+#       Defined in that source file:
+# alias -g fzf --multi
 
 # [ripgrep] rg... ~~()~~> "rg"
 # '-s' to add case sensitivity
