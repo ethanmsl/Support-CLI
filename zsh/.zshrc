@@ -197,20 +197,16 @@ alias el='exa --long --numeric --all --classify --header --icons --sort="type" -
 alias et='exa --tree --all --ignore-glob=".git" --icons --sort="type" --level=3'  # tree: max_depth 3
 alias etall='exa --tree --all --ignore-glob=".git" --icons --sort="type"'         # tree: unlimited depth
 
+# fd... ~~()~~> "fd"
+alias fd='fd --hidden'
+
 # fzf... ~~()~~> "fzf"
 # NOTE: fzf is involved enough to have its own file.
 #       See the "--fzf--" section (below) for source reference.
-#       Defined in that source file:
-# alias -g fzf --<with bat preview>
-
-# de-verbosing the common call to python(3)
-# python3 ~~()~~> "py"
-alias py='python3'
 
 # [ripgrep] rg... ~~()~~> "rg"
-# '-s' to add case sensitivity back
-alias -g rg='rg --hidden --ignore-case'
-# ^global to prevent silent fall back and subtle confusions that would ensue
+# '-s' to add case sensitivity
+ alias rg='rg --hidden --smart-case'  # case-insensitive unless caps in query
 
 # sets up zoxide, which operates as "z"
 # z ~~()~~> "c"  (easier to type and a partial version of "cd", lol)
