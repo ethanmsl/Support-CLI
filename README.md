@@ -77,7 +77,7 @@ brew tap homebrew/cask-fonts
 ```
 2. 
 ```zsh
-brew install --cask font-iosevka font-iosevka-slab font-syne-mono font-victor-mono font-major-mono-display font-anonymous-pro
+brew install --cask font-anonymous-pro font-hack font-iosevka font-iosevka-slab font-major-mono-display font-syne-mono font-victor-mono
 ```
 
 ## (3) Set-Up DotFiles

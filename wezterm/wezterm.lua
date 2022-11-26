@@ -17,6 +17,7 @@ return {
     <= >= := == === != !== ~= ~== >>= >>== -->  ~~> ==> <==> <*> ## :: |> <|
     \\ =~ !~ {. .} .= :- ._ /= =< <<= <<== || && |= =| Fl Tl fi fj ft qu Qu  ]]
     -- font = wezterm.font("Anonymous Pro"), --[[solid; no ligatures]]
+    -- font = wezterm.font("Hack"), --[[classic, but no ligatures]]
     -- font = wezterm.font("Iosevka"), --[[elegant and horizontally efficient; MANY custom versions]]
     font = wezterm.font("Iosevka Slab"), --[[elegant and horizontally efficient; MANY custom versions]]
     -- font = wezterm.font("JetBrains Mono"),  --[[default; solid, but .0]]
