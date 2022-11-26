@@ -15,7 +15,7 @@
     ;defaultBranch = default
 
 [core]
-    pager = delta --navigate;  --line-numbers
+    pager = delta --navigate --file-decoration-style 'yellow ul' --line-numbers --side-by-side 
     editor = nano
     ;editor = vim
     ;editor = nvim
