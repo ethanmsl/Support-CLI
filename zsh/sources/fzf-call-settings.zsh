@@ -23,8 +23,8 @@ export FZF_DEFAULT_COMMAND='fd --type f --unrestricted --exclude .git'
     # / follow symlinkgs / exclude .git dirs
 
 # used when called as the keybinding 'Cntl+t'
-#   <C+t>: search files FROM $HOME DOWN and drop chosen into commandline
-export FZF_CTRL_T_COMMAND='fd --type f --unrestricted --exclude .git . $HOME'
+#   <C+t>: search files FROM LOCAL DIR DOWN and drop chosen into commandline
+export FZF_CTRL_T_COMMAND='fd --type f --unrestricted --exclude .git' # . $HOME'
 
 # used when called as the keybinding 'Alt+c'
 #   <A+c>: search directories FROM $HOME DOWN and then cd to chosen
@@ -35,7 +35,7 @@ export FZF_ALT_C_COMMAND='fd --type d --unrestricted --follow . $HOME'
 # used when called as '**' and returning a file or directory path(s)
 #   e.g. 'nano **' or 'nvim **'
 _fzf_compgen_path() {
-    fd --unrestricted --follow --exclude ".git" . "$HOME"
+    fd --unrestricted --follow --exclude ".git" #  . "$HOME"
     # use fd / show hidden & ignored (e.g. due to .gitignore)
     # / follow symlinkgs / exclude .git dirs / dir_argument
 }
@@ -43,7 +43,7 @@ _fzf_compgen_path() {
 # used when called as '**' and returning ONLY a directory path(s)
 #   e.g. 'cd **'
 _fzf_compgen_dir() {
-    fd --type d --unrestricted --follow --exclude ".git" . "$HOME"
+    fd --type d --unrestricted --follow --exclude ".git" #  . "$HOME"
     # use fd / type: dirs / show hidden & ignored (e.g. due to .gitignore)
     # / follow symlinkgs / exclude .git dirs / dir_argument
 }
@@ -56,7 +56,7 @@ _fzf_compgen_dir() {
 # / preview with bat command [/show lines numbers / use color / line range 1through 500]
 
 # fzf... ~~()~~> "fzf"
-alias -g fzf='fzf --multi --preview "bat --style=numbers --color=always --line-range :500 {}"'
+alias -g fzf='fzf --multi'
 
 export FZF_CTRL_T_OPTS='--multi --preview "bat --style=numbers --color=always --line-range :500 {}"'
 export FZF_CTRL_R_OPTS=''
@@ -74,9 +74,13 @@ _fzf_comprun() {
     # NOTE: uses input alias, not it's expansion (e.g. 'z' -!-> 'c')
     case "$command" in
         cd|c|z)       fzf "$@" --preview 'exa --tree --all --ignore-glob=".git" {}' ;;
+        cp|mv)        fd --unrestricted --exclude .git . $HOME | fzf "$@" --preview 'exa --tree --all --ignore-glob=".git" {}' ;;
         export|unset) fzf "$@" --preview "eval 'echo \$'{}" ;;
         ssh)          fzf "$@" --preview 'dig {}' ;;
-        *)            fzf "$@" --multi --preview 'bat --style=numbers --color=always --line-range :500 {}' ;;
+        viu)          fzf "$@" --preview 'viu --blocks --height=20 {}' ;;
+        nn|nvim|vim|nano|hx|sd|sed|awk)
+            fzf "$@" --multi --preview 'bat --style=numbers --color=always --line-range :500 {}' ;;
+        *)            fzf "$@" --multi ;;
     esac
 }
 
