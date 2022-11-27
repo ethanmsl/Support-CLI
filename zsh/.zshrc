@@ -130,10 +130,10 @@ export VISUAL='nano'
 # NOTE: I have included '--all' ('-a') for all of the ls series
 #       that is not default behavior, but shows "hidden" files by default
 #       and will help when exploring the systems we're using.
-alias -g ls='exa --all'
-alias -g ll='exa --all --long'
-alias -g lt='exa --all --tree --level=3'
-alias -g tree='exa --all --tree --level=6'  # 'tree' is a common cli command, 
+alias -g ls='exa'
+alias -g ll='exa --long'
+alias -g lt='exa --tree --level=3'
+alias -g tree='exa --tree --level=6'  # 'tree' is a common cli command, 
                                             # though not pre-installed on mac
 
 # ----- cat, but with color -----
@@ -190,6 +190,13 @@ source ~/.config/zsh/sources/python-aliases.zsh
 # ----------- varied -----------
 # batman ~~()~~> "mab"
 alias mab='batman'
+alias bathelp='bat --plain --language=help'  # for piping
+helllp() {
+    "$@" --help 2>&1 | bathelp
+}  # long-form help ("--help") with syntax highlighting
+hep() {
+    "$@" -h 2>&1 | bathelp
+}  # short-form help ("-h") with syntax highlighting
 
 # exa ~~()~~> "e"_fam  (~= "ls"_fam)
 alias es='exa --all --classify  --icons --sort="type"'
@@ -197,8 +204,9 @@ alias el='exa --long --numeric --all --classify --header --icons --sort="type" -
 alias et='exa --tree --all --ignore-glob=".git" --icons --sort="type" --level=3'  # tree: max_depth 3
 alias etall='exa --tree --all --ignore-glob=".git" --icons --sort="type"'         # tree: unlimited depth
 
-# fd... ~~()~~> "fd"
-alias fd='fd --hidden'
+# fd_hidden ~~()~~> "fdh"
+alias fdh='fd --exclude="'"{.git,.venv}"'" --hidden'  # iclude hidden minus common noise
+# NOTE:          ^ this takes a *glob* pattern, not a regex pattern
 
 # fzf... ~~()~~> "fzf"
 # NOTE: fzf is involved enough to have its own file.
@@ -206,14 +214,15 @@ alias fd='fd --hidden'
 #       Defined in that source file:
 # alias -g fzf --multi
 
-# [ripgrep] rg... ~~()~~> "rg"
-# '-s' to add case sensitivity
- alias rg='rg --hidden --smart-case'  # case-insensitive unless caps in query
+# [ripgrep] rg_hidden ~~()~~> "rgh"
+# '-s' to add case sensitivity back
+alias rgh='rg --hidden'  # include hidden
 
 # sets up zoxide, which operates as "z"
 # z ~~()~~> "c"  (easier to type and a partial version of "cd", lol)
 eval "$(zoxide init zsh)"
 alias c='z'
+alias ci='zi'  # zoxide-interactive, uses fzf
 
 
 # ~~~~~~~~ --ZSH Completions ~~~~~~~~ #
