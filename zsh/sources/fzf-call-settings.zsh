@@ -18,9 +18,8 @@
 
 # used when called as 'fzf'
 #   e.g. 'fzf | xargs rm -i'
-export FZF_DEFAULT_COMMAND='fd --type f --unrestricted --exclude .git'
-    # use fd / type: files / show hidden & ignored (e.g. due to .gitignore)
-    # / follow symlinkgs / exclude .git dirs
+export FZF_DEFAULT_COMMAND='fd --unrestricted --exclude .git'
+    # use fd / show hidden & ignored (e.g. due to .gitignore) / exclude .git dirs
 
 # used when called as the keybinding 'Cntl+t'
 #   <C+t>: search files FROM LOCAL DIR DOWN and drop chosen into commandline
@@ -55,8 +54,8 @@ _fzf_compgen_dir() {
 # enable multiple selection (with tab/shft+tab) 
 # / preview with bat command [/show lines numbers / use color / line range 1through 500]
 
-# fzf... ~~()~~> "fzf"
-alias -g fzf='fzf --multi'
+# fzf --multi ~~()~~> "fzfm"
+alias fzfm='fzf --multi'
 
 export FZF_CTRL_T_OPTS='--multi --preview "bat --style=numbers --color=always --line-range :500 {}"'
 export FZF_CTRL_R_OPTS=''
@@ -77,7 +76,7 @@ _fzf_comprun() {
         cp|mv)        fd --unrestricted --exclude .git . $HOME | fzf "$@" --preview 'exa --tree --all --ignore-glob=".git" {}' ;;
         export|unset) fzf "$@" --preview "eval 'echo \$'{}" ;;
         ssh)          fzf "$@" --preview 'dig {}' ;;
-        viu)          fzf "$@" --preview 'viu --blocks --height=20 {}' ;;
+        viu)          fzf "$@" --preview 'viu --blocks --static --height=20 {}' ;;
         nn|nvim|vim|nano|hx|sd|sed|awk)
             fzf "$@" --multi --preview 'bat --style=numbers --color=always --line-range :500 {}' ;;
         *)            fzf "$@" --multi ;;
