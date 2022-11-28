@@ -132,7 +132,8 @@ export VISUAL='nano'
 #       and will help when exploring the systems we're using.
 alias -g ls='exa'
 alias -g ll='exa --long'
-alias -g lt='exa --tree --level=3'
+alias -g lt='exa --tree --level=3'  # tree view with a safety depth
+alias -g ltall='exa --tree'  # tree view with unlimited depth
 alias -g tree='exa --tree --level=6'  # 'tree' is a common cli command, 
                                             # though not pre-installed on mac
 
