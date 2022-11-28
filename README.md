@@ -148,6 +148,8 @@ mv .zprofile zbackup/
 mv .zlogin zbackup/
 mv .zlogout zbackup/
 ```
+(NOTE: you'll likely get multiple `No such file or directory` responses.  That's fine, it's unlikely you'd have all of those files.  As long you issued the above commands in your home directory `cd ~` you're all set.)
+
 **Step 2:** check if you have a .config file already for some reason and whether any folders with the same name as ours exist.
 ```zsh
 cd ~
