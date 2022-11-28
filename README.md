@@ -152,11 +152,11 @@ There's three steps.
 ```zsh
 cd ~
 mkdir z-backup-and-froze
-mv .zshrc zbackup/
-mv .zshenv zbackup/
-mv .zprofile zbackup/
-mv .zlogin zbackup/
-mv .zlogout zbackup/
+mv .zshrc z-backup-and-froze/
+mv .zshenv z-backup-and-froze/
+mv .zprofile z-backup-and-froze/
+mv .zlogin z-backup-and-froze/
+mv .zlogout z-backup-and-froze/
 ```
 (NOTE: you'll likely get multiple `No such file or directory` responses.  That's fine, it's unlikely you'd have all of those files.  As long you issued the above commands in your home directory `cd ~` you're all set.)
 
@@ -194,7 +194,7 @@ git checkout main
 ```zsh
 ln -s ~/.config/zsh/.zshenv ~/.zshenv
 ```
-So in the files you downloaded is a file that will tell the shell (the program the terminal runs) where everything is (in the .config folder, and elsewhere).  Of course, the computer can't know that without reading the file.  Catch-22.  So we're creating a "symlink" that makes that file accessible from it's classic location.  So the computer will find it, then read it, then find all the rest of our stuff. :)
+So in the files you downloaded is a file that will tell the shell (the program the terminal runs) where everything is (in the .config folder, and elsewhere).  Of course, the computer can't know that without reading the file.  Catch-22.  So we're creating a "symlink" that makes that file accessible from its classic location.  So the computer will find it, then read it, then find all the rest of our stuff. :)
 
 ---
 
@@ -203,7 +203,7 @@ Way to go!
 That was pretty much everything.  
 Two small commands and you can play away.
 
-1) `tldr` is an awesome way to get a quick reminder of commands, but it needs to download it's files from the internet, so just run:
+1) `tldr` is an awesome way to get a quick reminder of commands, but it needs to download its files from the internet, so just run:
 ```zsh
 tldr --update
 ```
