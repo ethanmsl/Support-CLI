@@ -5,14 +5,6 @@
 
 
 # Support-CLI - Part_1: Titles are Hard
-### aka:
-- ## "Terminal Fun Times!"
-	- (dark...)
-- ## "CLI Fun Times!"
-	- (obscure & casual to the point of awkward irony...)
-- ## Look, lets make your talky-text screen readable
-	- (Good ...but I've decided it's too late to change it now.  So let's move on.)
-
 Assumption: you either: 
 - (**a**) *have* to drop text in a terminal to do something 
 *OR* 
