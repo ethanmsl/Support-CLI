@@ -129,7 +129,7 @@ brew install starship zsh-autosuggestions zsh-syntax-highlighting bat choose-rus
 
 ## Optional: Install Fonts
 
-Terminals are all text almost all the time.  Having some choice in fonts is nice.  We're going to download some here so their there if you want later.  You can skip this step and everything else will work fine.
+Terminals are all text almost all the time.  Having some choice in fonts is nice.  We're going to download some here so they're there if you want later.  You can skip this step and everything else will work fine.
 NOTE: if we were using almost any terminal except Wezterm we would have to download special patched fonts with icons in them.  Wezterm provides those.  If you switch terminal emulators sometime just know that you might need special fonts.
 
 ```zsh
@@ -169,11 +169,22 @@ ls -a .config
 Ideally, you'll get `ls: .config: No such file or directory` as a response.  Alternatively, you'll get a list of contents of some pre-existing folder.  As long as none of those names match the names of what's in our folder `.gitignore .git wezterm starship zsh README.md` then you'll be fine.  Otherwise, talk to a friend before proceeding.
 
 **Step 3:** clone our repo into your home folder
+Assuming there was no .config directory then:
 ```zsh
 cd ~
 git clone -b main git@github.com:ethanmsl/Support-CLI.git .config
 ```
 (NOTE: that's the command for downloading the `main` branch of this repo.  If you want something else, e.g. the `intel` branch, but for some reason are reading the instructions to the main branch, you'll want to switch out the  "main" for "\<someothername\>".)
+
+<details> <summary> if there was a pre-existing .config directory </summary>
+**Alternately**, if there is an existing .config folder with no conflicting files that is not currently git versioned you would instead do this:
+```zsh
+git init
+git remote add main git@github.com:ethanmsl/Support-CLI.git
+git fetch
+git checkout main
+```
+</details>
 
 **Step 4**: tell the computer where everything is
 ```zsh
