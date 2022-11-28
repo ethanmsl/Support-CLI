@@ -48,6 +48,7 @@ We're going to help, *some*.
 - command coloring comparison image
 - auto-completion comparison image
 - man pages vs tldr
+- navi vs ... google
 
 (Note: this repo does *not* include the enahnced [tab completions](link) feature of ZSH.  The end effect is nice, but the implementation is especially arbitrary/opaque.  And adding them would essentially tack on maintenance cost to any user that wanted to change or enhance their set-up -- demanding that they add new tab completions along with any changes they make or accept inconsistent tab behavior.  That said, they are fully compatible with everything this repo adds.)
 
@@ -108,7 +109,7 @@ brew install --cask wez/wezterm/wezterm
 
 Bunch of stuff.  Easy-peasy.  Might take a second to download it all.  Be prepared for lots of scrolling text.  (Don't worry about it, but you can always uninstall and reinstall if you ever want to watch closely.)
 ``` zsh
-brew install starship zsh-autosuggestions zsh-syntax-highlighting bat choose-rust git-delta exa fd fzf ripgrep sd tealdeer zoxide eth-p/software/bat-extras-batman
+brew install starship zsh-autosuggestions zsh-syntax-highlighting bat choose-rust git-delta exa fd fzf navi ripgrep sd tealdeer zoxide eth-p/software/bat-extras-batman
 ```
 
 ## Optional: Install Fonts
