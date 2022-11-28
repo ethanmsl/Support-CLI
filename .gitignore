@@ -3,3 +3,10 @@
 # ------- ZSH ------- 
 # zsh command history; could contain quasi-sensitive info
 **/.zsh_history
+
+# ------- macOS -------
+# ideally these will already be (among other patterns) in the .gitignore_global
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
