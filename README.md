@@ -3,6 +3,7 @@
 
 
 
+--- 
 
 # Support-CLI - Part_1: Titles are Hard
 Assumption: you either: 
@@ -28,40 +29,57 @@ We're going to help, *some*.
 - And the vintage shell language(s), while *now* valued only for terseness and efficiency, spring from a time when they had to balance other needs.  The synatx of more complex commands is often clunky and awkward.
 	- New analogues with streamlined syntax exist.  Understanding that for *very* complicated actions a modern scripting language should be used instead of shell commands.
 
-### Color:
-- Starship comparison image
-- exa comparison image
-- man pages (bat) comparison image
+---
 
-### Navigation:
+### Colors in basic termina display:
+<img width="400" alt="Bog Standard" src="https://user-images.githubusercontent.com/33399972/204350396-437dc4b6-a512-4b23-a29a-e9517f0f905d.png">  <img width="400" alt="Enhanced - lt" src="https://user-images.githubusercontent.com/33399972/204350103-c8f0c97b-eaad-4d28-8890-1dc2071946a9.png">  
+(Displayed: [exa](https://the.exa.website/) & [starship](https://starship.rs/))
+
+
+### Context in the Command Line:
+- Starship comparison image
+<img width="600" alt="Starship Info" src="https://user-images.githubusercontent.com/33399972/204349272-d578efda-0819-44b6-a737-a3fed9bbe0a0.png">  
+(Displayed:  [starship](https://starship.rs/))
+
+
+### Fuzzy Finding and Intuitive Leaps :
 - standard (tab) behavior gif
 - fzf behavior gif
-- zoxide behavior gif
+- zoxide behavior gif  
+(Displayed: [zoxide](https://github.com/ajeetdsouza/zoxide) & [fzf](https://github.com/junegunn/fzf))
 
-### Searching:
-- matrix image of time for grep, find, sed vs rg, fd, sd 
 
-### Syntax:
-- matrix of comparison for syntax for grep, find, sed, awk, vs rg, fd, sd, choose
+### Fast, Simple Syntax Searching
+<img width="400" alt="fd proteins" src="https://user-images.githubusercontent.com/33399972/204349982-584f7f49-7fd8-4abf-9074-a52f1e8ab731.png"> <img width="400" alt="ripgrep Little Women - folk" src="https://user-images.githubusercontent.com/33399972/204350035-44653509-9cc9-4522-bc6d-63b83fc2960c.png">  
+(Displayed: [fd](https://github.com/sharkdp/fd) and [ripgrep](https://github.com/BurntSushi/ripgrep))
 
-### Assitance:
-- command coloring comparison image
-- auto-completion comparison image
-- man pages vs tldr
-- navi vs ... google
+### Smart Searching :
+<img width="300" alt="Fuzzy Find Insert - viu" src="https://user-images.githubusercontent.com/33399972/204349713-7aff2995-11bf-4e5b-9ed0-50bb1dd47527.png"> <img width="300" alt="Fuzzy Find inserts - cd" src="https://user-images.githubusercontent.com/33399972/204349778-5264d72a-a0da-487e-84a0-1aed58db95f1.png"> <img width="300" alt="Fuzzy find inserts - text editor" src="https://user-images.githubusercontent.com/33399972/204349851-76f15ca3-28bd-4905-870c-d3c2386759af.png">  
+(Displayed: [fzf](https://github.com/junegunn/fzf) using [viu](https://github.com/atanunq/viu), [exa](https://the.exa.website/), and [bat](https://github.com/sharkdp/bat) for previewing)
 
-(Note: this repo does *not* include the enahnced [tab completions](link) feature of ZSH.  The end effect is nice, but the implementation is especially arbitrary/opaque.  And adding them would essentially tack on maintenance cost to any user that wanted to change or enhance their set-up -- demanding that they add new tab completions along with any changes they make or accept inconsistent tab behavior.  That said, they are fully compatible with everything this repo adds.)
 
+### Improved Documentation and Quick Searches
+<img width="300" alt="man   help page highlighting" src="https://user-images.githubusercontent.com/33399972/204349476-628ed476-88ba-4719-b82f-3bd43df62c93.png"> <img width="300" alt="quick use look up - tldr" src="https://user-images.githubusercontent.com/33399972/204349561-b37f3992-16c4-424d-8910-1baca9a1901f.png"> <img width="300" alt="Common actions searches - navi" src="https://user-images.githubusercontent.com/33399972/204350265-fae96946-e574-438d-b33a-94396ee0f23a.png">  
+(Displayed: [bat](https://github.com/sharkdp/bat), [tealdeer](https://github.com/dbrgn/tealdeer), and [navi](https://github.com/denisidoro/navi))
+
+
+### And Sundry other elements
+<img width="752" alt="syntax correction" src="https://user-images.githubusercontent.com/33399972/204349947-d3451d0b-07a9-4fa6-9fe4-bd208090bb0d.png">
+
+
+---
 
 
 # Support-CLI - Part_2: What You Need
 
 You don't need a lot.  But three *soft* needs are: 
 1) have git and a github account (so you can clone this repo)
-2) have a recent mac OS (intel processors should use the "`intel`" branch of this repo, otherwise use "`main`").  
+2) have a recent mac OS (apple-silicon processors should use the "`main`" branch of this repo).  
 3) know how to view "hidden" files on your computer.
 
 There are workarounds for all of the above, but they won't be addressed here.
+
+---
 
 # Support-CLI - Part_3: Prepping for Install
 
@@ -88,6 +106,8 @@ git clone git@github.com:ethanmsl/CloneMeToCheckThatYouCan.git
 If any of those checks gave you guff then something isn't set-up.  
 Check with a friend, coworker, or the interwebs.  
 Once you're good on all three of the above you can productively proceed!  
+
+---
 
 # Support-CLI - Part_4: Downloads!
 
@@ -124,6 +144,8 @@ brew install --cask font-anonymous-pro font-hack font-iosevka font-iosevka-slab 
 
 You can also add [other fonts of your choice later](https://www.programmingfonts.org/).  Just note that almost all terminals assume fixed width fonts.  So make sure the font you're using is compatible with a terminal.  (Generall anything labelled a "programming", "terminal", or "monospace" font will work. :)
 
+---
+
 # Support-CLI - Part_5: Cloning & Symlinking
 
 Okay, here's the skinny.  A lot of your configuration files are just strewn about the place by default.  Frankly, it's annoying.  And makes keeping track of (and version controlling) them hard.  What we're going to do is put all the config files we care about in a folder called `.config` and then tell the computer where we put them so everyone's happy.
@@ -156,7 +178,7 @@ Ideally, you'll get `ls: .config: No such file or directory` as a response.  Alt
 cd ~
 git clone -b intel git@github.com:ethanmsl/Support-CLI.git
 ```
-(NOTE: that's the command for downloading the `intel` branch of this repo.  If you want something else, e.g. the `main` branch [for "apple silicon"], but for some reason are reading the instructions to the intel branch, you'll want to switch out the  "intel" for "\<someothername\>".)
+(NOTE: that's the command for downloading the `intel` branch of this repo.  If you want something else, e.g. the `main` branch, but for some reason are reading the instructions to the main branch, you'll want to switch out the  "main" for "\<someothername\>".)
 
 **Step 4**: tell the computer where everything is
 ```zsh
@@ -164,8 +186,7 @@ ln -s ~/.config/zsh/.zshenv ~/.zshenv
 ```
 So in the files you downloaded is a file that will tell the shell (the program the terminal runs) where everything is (in the .config folder, and elsewhere).  Of course, the computer can't know that without reading the file.  Catch-22.  So we're creating a "symlink" that makes that file accessible from it's classic location.  So the computer will find it, then read it, then find all the rest of our stuff. :)
 
-
-
+---
 
 # Support-CLI - Part_6: Touch Ups
 Way to go!
