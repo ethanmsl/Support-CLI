@@ -159,9 +159,9 @@ Ideally, you'll get `ls: .config: No such file or directory` as a response.  Alt
 **Step 3:** clone our repo into your home folder
 ```zsh
 cd ~
-git clone -b main git@github.com:ethanmsl/Support-CLI.git
+git clone -b intel git@github.com:ethanmsl/Support-CLI.git
 ```
-(NOTE: that's the command for downloading the `main` branch of this repo.  If you want something else, e.g. the `intel` branch, but for some reason are reading the instructions to the main branch, you'll want to switch out the  "main" for "\<someothername\>".)
+(NOTE: that's the command for downloading the `intel` branch of this repo.  If you want something else, e.g. the `main` branch [for "apple silicon"], but for some reason are reading the instructions to the intel branch, you'll want to switch out the  "intel" for "\<someothername\>".)
 
 **Step 4**: tell the computer where everything is
 ```zsh
