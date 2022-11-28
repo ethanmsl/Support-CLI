@@ -176,14 +176,18 @@ git clone -b main git@github.com:ethanmsl/Support-CLI.git .config
 ```
 (NOTE: that's the command for downloading the `main` branch of this repo.  If you want something else, e.g. the `intel` branch, but for some reason are reading the instructions to the main branch, you'll want to switch out the  "main" for "\<someothername\>".)
 
-<details> <summary> if there was a pre-existing .config directory </summary>
-**Alternately**, if there is an existing .config folder with no conflicting files that is not currently git versioned you would instead do this:
+<details> 
+<summary> if there was a pre-existing .config directory </summary>  
+
+**Alternately**, if there is an existing .config folder with no conflicting files that is not currently git versioned you would instead do this: 
+
 ```zsh
 git init
 git remote add main git@github.com:ethanmsl/Support-CLI.git
 git fetch
 git checkout main
 ```
+
 </details>
 
 **Step 4**: tell the computer where everything is
