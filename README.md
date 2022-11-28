@@ -31,7 +31,7 @@ We're going to help, *some*.
 
 ---
 
-### Colors in basic termina display:
+### Colors in basic terminal display:
 <img width="400" alt="Bog Standard" src="https://user-images.githubusercontent.com/33399972/204350396-437dc4b6-a512-4b23-a29a-e9517f0f905d.png">  <img width="400" alt="Enhanced - lt" src="https://user-images.githubusercontent.com/33399972/204350103-c8f0c97b-eaad-4d28-8890-1dc2071946a9.png">  
 (Displayed: [exa](https://the.exa.website/) & [starship](https://starship.rs/))
 
