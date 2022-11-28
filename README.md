@@ -59,8 +59,8 @@ We're going to help, *some*.
 
 
 ### And Sundry other elements
-<img width="500" alt="syntax correction" src="https://user-images.githubusercontent.com/33399972/204349947-d3451d0b-07a9-4fa6-9fe4-bd208090bb0d.png"> <img width="500" alt="Starship Info" src="https://user-images.githubusercontent.com/33399972/204349272-d578efda-0819-44b6-a737-a3fed9bbe0a0.png">  ...
-(Displayed: ZSH syntaxh checker & [starship](https://starship.rs/))
+<img width="500" alt="syntax correction" src="https://user-images.githubusercontent.com/33399972/204349947-d3451d0b-07a9-4fa6-9fe4-bd208090bb0d.png"> <img width="500" alt="Starship Info" src="https://user-images.githubusercontent.com/33399972/204349272-d578efda-0819-44b6-a737-a3fed9bbe0a0.png">  ...  
+(Displayed: ZSH syntax checker & [starship](https://starship.rs/))
 
 ---
 
