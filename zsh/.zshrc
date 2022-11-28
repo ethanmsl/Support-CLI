@@ -268,5 +268,5 @@ eval "$(starship init zsh)"
 # NOTE: location may change for a given installation
 #       if in doubt: 'brew reinstall ...' and check the output location
 #       (it should give you an explicit "source ..." line to add)
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh  # intel macOS path
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # intel " "
