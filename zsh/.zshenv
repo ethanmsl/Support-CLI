@@ -25,7 +25,13 @@ export HISTFILE=$HOME/.zsh_history  # default
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # ----------- git ----------- 
-export GIT_CONFIG_GLOBAL=$HOME/.config/git_global/.gitconfig
+# This is code is provided commented out for easy integration if desired.
+# It will tell git to look for its config files in a folder labeled "git_global"
+# inside the ".config" folder in your home directory.
+# It's quite nice if you version control your configuration files, allowing you to
+# include global git and global .gitignore settings.
+#
+# export GIT_CONFIG_GLOBAL=$HOME/.config/git_global/.gitconfig
 # "git_config_(global/system)": 
 #       "..._global"" is for user (usually in "$HOME/...")
 #       "..._system" is for system/computer (usually in "/etc/...")
