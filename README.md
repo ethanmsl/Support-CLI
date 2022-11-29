@@ -96,7 +96,7 @@ brew --version
 cd ~/Desktop
 git clone git@github.com:ethanmsl/CloneMeToCheckThatYouCan.git
 ```
-(That last check will do a test clone to an itty-bitty repo -- if it succeeded there should be a folder called `CloneMeToCheckThatYouCan` on your desktop now, with a single text file congratulating you.  You can just delete that folder after.  \[All the git machinery associatted with it lives hidden in the folder you cloned, so there's nothing else to clean up.\])
+(That last check will do a test clone of an itty-bitty repo -- if it succeeded there should be a folder called `CloneMeToCheckThatYouCan` on your desktop now, with a single text file congratulating you.  You can just delete that folder after.  \[All the git machinery associatted with it lives hidden in the folder you cloned, so there's nothing else to clean up.\])
 
 If any of those checks gave you guff then something isn't set-up.  
 Check with a friend, coworker, or the interwebs.  
