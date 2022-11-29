@@ -137,7 +137,7 @@ brew tap homebrew/cask-fonts
 brew install --cask font-anonymous-pro font-hack font-iosevka font-iosevka-slab font-major-mono-display font-syne-mono font-victor-mono
 ```
 
-You can also add [other fonts of your choice later](https://www.programmingfonts.org/).  Just note that almost all terminals assume fixed width fonts.  So make sure the font you're using is compatible with a terminal.  (Generall anything labelled a "programming", "terminal", or "monospace" font will work. :)
+You can also add [other fonts of your choice later](https://www.programmingfonts.org/).  Just note that almost all terminals assume fixed width fonts.  So make sure the font you're using is compatible with a terminal.  (Typically, anything labelled a "programming", "terminal", or "monospace" font will work. :)
 
 ---
 
