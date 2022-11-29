@@ -168,8 +168,8 @@ ls -a .config
 
 Ideally, you'll get `ls: .config: No such file or directory` as a response.  Alternatively, you'll get a list of contents of some pre-existing folder.  As long as none of those names match the names of what's in our folder `.gitignore .git wezterm starship zsh README.md` then you'll be fine.  Otherwise, talk to a friend before proceeding.
 
-**Step 3:** clone our repo into your home folder
-Assuming there was no .config directory then:
+**Step 3:** clone our repo into your home folder  
+Assuming there was no `.config` directory when you checked in the previous step, run:
 ```zsh
 cd ~
 git clone -b main git@github.com:ethanmsl/Support-CLI.git .config
