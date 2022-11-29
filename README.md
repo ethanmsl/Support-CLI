@@ -179,7 +179,7 @@ git clone -b main git@github.com:ethanmsl/Support-CLI.git .config
 <details> 
 <summary> if there was a pre-existing .config directory </summary>  
 
-**Alternately**, if there is an existing .config folder with no conflicting files that is not currently git versioned you would instead do this: 
+**Alternately**, if there is an existing .config folder with no conflicting files that is not currently git versioned you would instead do this:  
 
 ```zsh
 git init
@@ -190,7 +190,7 @@ git checkout main
 
 </details>
 
-**Step 4**: tell the computer where everything is
+**Step 4**: tell the computer where everything is. 
 ```zsh
 ln -s ~/.config/zsh/.zshenv ~/.zshenv
 ```
@@ -203,12 +203,12 @@ Way to go!
 That was pretty much everything.  
 Two small commands and you can play away.
 
-1) `tldr` is an awesome way to get a quick reminder of commands, but it needs to download its files from the internet, so just run:
+1) `tldr` is an awesome way to get a quick reminder of commands, but it needs to download its files from the internet, so just run:  
 ```zsh
 tldr --update
 ```
 
-2) `fzf` is a really useful tool with some complicated shell integration options.  Now that all our files are in place we're going to leverage them.  Run the following command and say `Y` when it asks you if you want the three picture doptions:
+2) `fzf` is a really useful tool with some complicated shell integration options.  Now that all our files are in place we're going to leverage them.  Run the following command and say `Y` when it asks you if you want the three pictured options:  
 ```zsh
 $(brew --prefix)/opt/fzf/install
 ```
