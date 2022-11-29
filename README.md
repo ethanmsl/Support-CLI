@@ -5,7 +5,7 @@
 
 --- 
 
-# Support-CLI - Part_1: Titles are Hard
+# Support-CLI - Part_1: Intro
 Assumption: you either: 
 - (**a**) *have* to drop text in a terminal to do something 
 *OR* 
@@ -96,7 +96,7 @@ brew --version
 cd ~/Desktop
 git clone git@github.com:ethanmsl/CloneMeToCheckThatYouCan.git
 ```
-(That last check will do a test clone to an itty-bitty repo -- if it succeeded there should be a folder called `CloneMeToCheckThatYouCan` on your desktop now, with a single text file congratulating you.  You can just delete that folder after.  \[All the git machinery associatted with it lives hidden in the folder you cloned, so there's nothing else to clean up.\])
+(That last check will do a test clone of an itty-bitty repo -- if it succeeded there should be a folder called `CloneMeToCheckThatYouCan` on your desktop now, with a single text file congratulating you.  You can just delete that folder after.  \[All the git machinery associatted with it lives hidden in the folder you cloned, so there's nothing else to clean up.\])
 
 If any of those checks gave you guff then something isn't set-up.  
 Check with a friend, coworker, or the interwebs.  
@@ -111,7 +111,7 @@ To do that we're just going to give brew a long list of the names of what we wan
 Easy peasy.
 
 ### Install our new Terminal (Emulator).
-(They're called "emulators" because actual "terminals" refer to the physical objects people used a half century ago.)  
+(They're sometimes called "... emulators" because "terminal" can also mean the [physical objects](https://en.wikipedia.org/wiki/Computer_terminal) people used a half-ish century ago.)  
 
 We're going to install a terminal called "[Wezterm](https://wezfurlong.org/wezterm/)".  It's fast, configurable, and has great support for many things (font icon extensions, font ligatures, using mac option key effectively, image protocols, large color range ... post-70's stuff). [And other stuff we won't discuss here](https://wezfurlong.org/wezterm/features.html).
 
@@ -124,12 +124,12 @@ brew install --cask wez/wezterm/wezterm
 
 Bunch of stuff.  Easy-peasy.  Might take a second to download it all.  Be prepared for lots of scrolling text.  (Don't worry about it, but you can always uninstall and reinstall if you ever want to watch closely.)
 ``` zsh
-brew install starship zsh-autosuggestions zsh-syntax-highlighting bat choose-rust git-delta exa fd fzf navi ripgrep sd tealdeer zoxide eth-p/software/bat-extras-batman
+brew install starship zsh-autosuggestions zsh-syntax-highlighting bat choose-rust git-delta exa fd fzf navi ripgrep sd tealdeer viu zoxide eth-p/software/bat-extras-batman
 ```
 
 ## Optional: Install Fonts
 
-Terminals are all text almost all the time.  Having some choice in fonts is nice.  We're going to download some here so their there if you want later.  You can skip this step and everything else will work fine.
+Terminals are all text almost all the time.  Having some choice in fonts is nice.  We're going to download some here so they're there if you want later.  You can skip this step and everything else will work fine.
 NOTE: if we were using almost any terminal except Wezterm we would have to download special patched fonts with icons in them.  Wezterm provides those.  If you switch terminal emulators sometime just know that you might need special fonts.
 
 ```zsh
@@ -137,7 +137,7 @@ brew tap homebrew/cask-fonts
 brew install --cask font-anonymous-pro font-hack font-iosevka font-iosevka-slab font-major-mono-display font-syne-mono font-victor-mono
 ```
 
-You can also add [other fonts of your choice later](https://www.programmingfonts.org/).  Just note that almost all terminals assume fixed width fonts.  So make sure the font you're using is compatible with a terminal.  (Generall anything labelled a "programming", "terminal", or "monospace" font will work. :)
+You can also add [other fonts of your choice later](https://www.programmingfonts.org/).  Just note that almost all terminals assume fixed width fonts.  So make sure the font you're using is compatible with a terminal.  (Typically, anything labelled a "programming", "terminal", or "monospace" font will work. :)
 
 ---
 
@@ -152,11 +152,11 @@ There's three steps.
 ```zsh
 cd ~
 mkdir z-backup-and-froze
-mv .zshrc zbackup/
-mv .zshenv zbackup/
-mv .zprofile zbackup/
-mv .zlogin zbackup/
-mv .zlogout zbackup/
+mv .zshrc z-backup-and-froze/
+mv .zshenv z-backup-and-froze/
+mv .zprofile z-backup-and-froze/
+mv .zlogin z-backup-and-froze/
+mv .zlogout z-backup-and-froze/
 ```
 (NOTE: you'll likely get multiple `No such file or directory` responses.  That's fine, it's unlikely you'd have all of those files.  As long you issued the above commands in your home directory `cd ~` you're all set.)
 
@@ -168,18 +168,33 @@ ls -a .config
 
 Ideally, you'll get `ls: .config: No such file or directory` as a response.  Alternatively, you'll get a list of contents of some pre-existing folder.  As long as none of those names match the names of what's in our folder `.gitignore .git wezterm starship zsh README.md` then you'll be fine.  Otherwise, talk to a friend before proceeding.
 
-**Step 3:** clone our repo into your home folder
+**Step 3:** clone our repo into your home folder  
+Assuming there was no `.config` directory when you checked in the previous step, run:
 ```zsh
 cd ~
 git clone -b intel git@github.com:ethanmsl/Support-CLI.git .config
 ```
-(NOTE: that's the command for downloading the `intel` branch of this repo.  If you want something else, e.g. the `main` branch, but for some reason are reading the instructions to the main branch, you'll want to switch out the  "intel" for "\<someothername\>".)
+(NOTE: that's the command for downloading the `intel` branch of this repo.  If you want something else, e.g. the `main` branch (for "apple silicon"), but for some reason are reading the instructions to the intel branch, you'll want to switch out the  "intel" for "\<someothername\>".)
 
-**Step 4**: tell the computer where everything is
+<details> 
+<summary> if there was a pre-existing .config directory </summary>  
+
+**Alternately**, if there is an existing .config folder with no conflicting files that is not currently git versioned you would instead do this:  
+
+```zsh
+git init
+git remote add main git@github.com:ethanmsl/Support-CLI.git
+git fetch
+git checkout main
+```
+
+</details>
+
+**Step 4**: tell the computer where everything is. 
 ```zsh
 ln -s ~/.config/zsh/.zshenv ~/.zshenv
 ```
-So in the files you downloaded is a file that will tell the shell (the program the terminal runs) where everything is (in the .config folder, and elsewhere).  Of course, the computer can't know that without reading the file.  Catch-22.  So we're creating a "symlink" that makes that file accessible from it's classic location.  So the computer will find it, then read it, then find all the rest of our stuff. :)
+Among the files you downloaded is a file (`.zshenv`) that will tell the [shell](https://en.wikipedia.org/wiki/Shell_(computing)) where lots of stuff is (e.g. the .config folder).  If that file is in an alternate location the computer can't find it without reading the location from it....  Catch-22.  So we're creating a "symlink" that, effectively, makes the file accessible from _both_ locations at once.  The computer will find it in twinned location, then read it, then find all the rest of our stuff. :)
 
 ---
 
@@ -188,12 +203,12 @@ Way to go!
 That was pretty much everything.  
 Two small commands and you can play away.
 
-1) `tldr` is an awesome way to get a quick reminder of commands, but it needs to download it's files from the internet, so just run:
+1) `tldr` is an awesome way to get a quick reminder of commands, but it needs to download its files from the internet, so just run:  
 ```zsh
 tldr --update
 ```
 
-2) `fzf` is a really useful tool with some complicated shell integration options.  Now that all our files are in place we're going to leverage them.  Run the following command and say `Y` when it asks you if you want the three picture doptions:
+2) `fzf` is a really useful tool with some complicated shell integration options.  Now that all our files are in place we're going to leverage them.  Run the following command and say `Y` when it asks you if you want the three pictured options:  
 ```zsh
 $(brew --prefix)/opt/fzf/install
 ```
