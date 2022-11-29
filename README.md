@@ -111,7 +111,7 @@ To do that we're just going to give brew a long list of the names of what we wan
 Easy peasy.
 
 ### Install our new Terminal (Emulator).
-(They're called "emulators" because actual "terminals" refer to the physical objects people used a half century ago.)  
+(They're sometimes called "... emulators" because "terminal" can also mean the [physical objects](https://en.wikipedia.org/wiki/Computer_terminal) people used a half-ish century ago.)  
 
 We're going to install a terminal called "[Wezterm](https://wezfurlong.org/wezterm/)".  It's fast, configurable, and has great support for many things (font icon extensions, font ligatures, using mac option key effectively, image protocols, large color range ... post-70's stuff). [And other stuff we won't discuss here](https://wezfurlong.org/wezterm/features.html).
 
