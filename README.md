@@ -124,7 +124,7 @@ brew install --cask wez/wezterm/wezterm
 
 Bunch of stuff.  Easy-peasy.  Might take a second to download it all.  Be prepared for lots of scrolling text.  (Don't worry about it, but you can always uninstall and reinstall if you ever want to watch closely.)
 ``` zsh
-brew install starship zsh-autosuggestions zsh-syntax-highlighting bat choose-rust git-delta exa fd fzf navi ripgrep sd tealdeer zoxide eth-p/software/bat-extras-batman
+brew install starship zsh-autosuggestions zsh-syntax-highlighting bat choose-rust git-delta exa fd fzf navi ripgrep sd tealdeer viu zoxide eth-p/software/bat-extras-batman
 ```
 
 ## Optional: Install Fonts
