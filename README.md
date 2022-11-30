@@ -223,8 +223,8 @@ ___________________________
 (covers BASH, but applies to ZSH)
 
 ## Helpful Resources:
-- [ExplainShell](https://explainshell.com/): feed it a command and get it broken down! Useful for basic command arguments and context.  (won't parse more involved syntax of arguments to things like `sed`)
-- [TLDR Pages](https://tldr.ostera.io/) - we install (below) a CLI tool to do this (e.g. type `tldr mkdir`), but if you don't have that these pages are great!
+- [ExplainShell](https://explainshell.com/): feed it a command and get it broken down! Useful for basic command arguments and context.  (won't parse more involved syntax of arguments to things like `sed` nor is it familiar with newer commands like `sd`; still useful for deciphering many commands you might come across, especially in install instructions)
+- [TLDR Pages](https://tldr.ostera.io/) - we installed a CLI tool to do this (e.g. type `tldr mkdir`), but if you don't have that at hand these pages are great!
 - [SC: Unix Summary](https://swcarpentry.github.io/shell-novice/reference): just a overview of the Software Carpentry lessons above.  Good for a quick reminder peak.
 ______________________________________________
 
