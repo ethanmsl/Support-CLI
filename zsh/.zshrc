@@ -86,9 +86,9 @@ export VISUAL='nano'
 
 
 # ########################### --Aliases-- ############################## #
-# ¡NOTE!:  'alias -g ...' allows alias to work even if not first word in command
+# ¡NOTE!:  'alias -g ...' expands alias wherever it occurs in command
 #           e.g. say    'al='alias'
-#                then   > al  ~~> > alias
+#                then   > al  ~~> alias
 #                       > fd whatever | al ~~> fd whatever | alias
 #                BUT    > sudo al  ~~> sudo al     <-- no expansion
 #                       > echo al ~~> echo al      <-- no expansion
@@ -130,18 +130,18 @@ export VISUAL='nano'
 # NOTE: I have included '--all' ('-a') for all of the ls series
 #       that is not default behavior, but shows "hidden" files by default
 #       and will help when exploring the systems we're using.
-alias -g ls='exa'
-alias -g ll='exa --long'
-alias -g lt='exa --tree --level=3'  # tree view with a safety depth
-alias -g ltall='exa --tree'  # tree view with unlimited depth
-alias -g tree='exa --tree --level=6'  # 'tree' is a common cli command, 
+alias ls='exa'
+alias ll='exa --long'
+alias lt='exa --tree --level=3'  # tree view with a safety depth
+alias ltall='exa --tree'  # tree view with unlimited depth
+alias tree='exa --tree --level=6'  # 'tree' is a common cli command, 
                                             # though not pre-installed on mac
 
 # ----- cat, but with color -----
-alias -g cat='bat --paging=never'
+alias cat='bat --paging=never'
 
 # ----- man(pages), but with color -----
-alias -g man='batman'
+alias man='batman'
 # NOTE: some commands do not have man pages, but often will respond to
 #       '<command> --help'
 #       when that help has man-like syntax we can simulate 'batman' 
@@ -213,7 +213,7 @@ alias fdh='fd --exclude="'"{.git,.venv}"'" --hidden'  # iclude hidden minus comm
 # NOTE: fzf is involved enough to have its own file.
 #       See the "--fzf--" section (below) for source reference.
 #       Defined in that source file:
-# alias -g fzf --multi
+# alias fzf --multi
 
 # [ripgrep] rg_hidden ~~()~~> "rgh"
 # '-s' to add case sensitivity back
