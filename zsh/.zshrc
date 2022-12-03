@@ -213,7 +213,7 @@ alias fdh='fd --exclude="'"{.git,.venv}"'" --hidden'  # iclude hidden minus comm
 # NOTE: fzf is involved enough to have its own file.
 #       See the "--fzf--" section (below) for source reference.
 #       Defined in that source file:
-# alias fzf --multi
+# alias fzfm --multi
 
 # [ripgrep] rg_hidden ~~()~~> "rgh"
 # '-s' to add case sensitivity back
