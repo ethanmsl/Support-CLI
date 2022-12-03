@@ -32,6 +32,9 @@ alias vpyoff='deactivate'
 # # # ^not working correctly as of XI-16-'22 : see 'workarounds' below
 # alias poetck='poetry check'
 #
+# #       build
+# alias poetb='poetry build'
+#
 # #       export
 # alias poetexp='poetry export'
 # alias poetreq='poetry export --format=requirements.txt'
@@ -51,6 +54,12 @@ alias vpyoff='deactivate'
 # # trying to prevent non-src based repo structs and remember that needs specification
 # alias poetn='echo "did you mean '"'poetns'"', i.e. '"'poetry new --src'"'?"'
 # alias poetns='poetry new --src'
+#
+# #       publish
+# alias poetpub='poetry publish'
+# alias poetpubrepo='poetry publish --repository'  # e.g. 'poetpubrepo testpypi'
+# alias poetpubtpp='poetry publish --repository testpypi'
+# # above assume an api-token is set-up elsewhere
 #
 # #       shell & show
 # alias poets='poetry shell'
