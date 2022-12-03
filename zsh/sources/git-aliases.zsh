@@ -20,7 +20,7 @@ alias gclean='git clean'
 alias gcleani='git clean --interactive'
 alias gcleandry='git clean --dry-run'
 
-#       branch & checkout
+#       branch & checkout & cherry-pick
 alias gb='git branch'  # git list all branches if no further elaboration
 alias gba='git branch --all --verbose --verbose' # also list:
 #                           remote branches, last commit, and tracking branch
@@ -29,6 +29,8 @@ alias gbv='git branch --verbose --verbose' # last commit & tracking branch
 #                                            (double '--verbose' is needed)
 alias gk='git checkout'
 alias gkh='git checkout HEAD'  # return files to last commit state (¡does not preserve changes as unstaged!)
+
+alias gcherry='git cherry-pick'  # cherry picks specific *commits*; `glg` shows commits
 
 #       clone
 alias gclone='git clone'
