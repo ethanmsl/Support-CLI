@@ -48,6 +48,9 @@ function gdback() {  # git diff against N commits ago
 #       fetch
 alias gf='git fetch'
 
+#       hook
+alias ghk='git hook run'  # e.g. (`ghk pre-commit`)
+
 #       init
 alias ginit='git init'
 
