@@ -194,7 +194,7 @@ git checkout main
 ```zsh
 ln -s ~/.config/zsh/.zshenv ~/.zshenv
 ```
-Among the files you downloaded is a file (`.zshenv`) that will tell the [shell](https://en.wikipedia.org/wiki/Shell_(computing)) where lots of stuff is (e.g. the .config folder).  If that file is in an alternate location the computer can't find it without reading the location from it....  Catch-22.  So we're creating a "symlink" that, effectively, makes the file accessible from _both_ locations at once.  The computer will find it in twinned location, then read it, then find all the rest of our stuff. :)
+Among the files you downloaded is a file (`.zshenv`) that will tell the [shell](https://en.wikipedia.org/wiki/Shell_(computing)) where lots of stuff is (e.g. the .config folder).  If that file is in an alternate location the computer can't find it without reading the location from it....  Catch-22.  So we're creating a "symlink" that, effectively, makes the file accessible from _both_ locations at once.  The computer will find it in its twinned location, then read it, then find all the rest of our stuff. :)
 
 ---
 
