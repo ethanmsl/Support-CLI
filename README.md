@@ -228,3 +228,27 @@ ___________________________
 - [SC: Unix Summary](https://swcarpentry.github.io/shell-novice/reference): just a overview of the Software Carpentry lessons above.  Good for a quick reminder peak.
 ______________________________________________
 
+
+----------------------------------------------
+----------------------------------------------
+# Sketch for Readme Expansion
+
+## List to link, with brief explanations:
+- brew
+- starship 
+- zsh-autosuggestions 
+- zsh-syntax-highlighting 
+- bat 
+    - eth-p/software/bat-extras-batman
+    - hepbat & helpbat
+- choose-rust 
+- git-delta 
+- exa 
+- fd 
+- fzf 
+- navi 
+- ripgrep 
+- sd 
+- tealdeer 
+- viu 
+- zoxide 
