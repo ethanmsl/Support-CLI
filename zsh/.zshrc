@@ -52,7 +52,7 @@ unsetopt LIST_BEEP
 
 # try to correct command and all arguments on line
 setopt correct_all
-export CORRECT_IGNORE_FILE='.vim|.nvim|.git'
+export CORRECT_IGNORE_FILE='.vim|.nvim|.git|.config|.env'
 # ^ list of *replacements* to NOT offer for correct_*all*
 #   if you want to add anything to this list just add "|<the_correction>"
 #   to the above
