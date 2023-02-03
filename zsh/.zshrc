@@ -31,9 +31,10 @@
 # synching terminal history (and possibly sensitive data)
 # NOTE: also in .zshenv
 export HISTFILE=$HOME/.zsh_history
-HISTFILE=~/.zsh_history
-HISTSIZE=999999999
-SAVEHIST=$HISTSIZE
+export SAVEHIST=999999000  # deduplicated history size
+export HISTSIZE=999999999  # non-deduplicated history size
+# HISTSIZE - SAVEHIST = number of non-deduplicated lines kept in history
+# in our case: diff = 999
 
 
 # ######################### --ZSH Options --############################ #
