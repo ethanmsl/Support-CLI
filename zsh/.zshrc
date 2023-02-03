@@ -31,6 +31,9 @@
 # synching terminal history (and possibly sensitive data)
 # NOTE: also in .zshenv
 export HISTFILE=$HOME/.zsh_history
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
 
 
 # ######################### --ZSH Options --############################ #
