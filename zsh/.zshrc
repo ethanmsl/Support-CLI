@@ -193,6 +193,9 @@ source ~/.config/zsh/sources/git-aliases.zsh
 source ~/.config/zsh/sources/python-aliases.zsh
 
 # ----------- varied -----------
+# alias (search) ~~()~~> "aliases"
+alias aliases='alias | fzf'
+
 # batman ~~()~~> "mab"
 alias mab='batman'
 alias bathelp='bat --plain --language=help'  # for piping
