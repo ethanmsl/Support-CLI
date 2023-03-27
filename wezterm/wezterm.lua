@@ -46,7 +46,8 @@ return {
     },
     -- enable_tab_bar = false, --[[for minimalist terminal]]
     use_fancy_tab_bar = true, --[[no effect if 'enable_tab_bar' is false]]
-    window_background_opacity = 0.85,
+    window_background_opacity = 0.50,  --[[transparency]]
+    macos_window_background_blur = 15,  --[[blur, given transparency]]
 
     --[inactive pane configuration]
     inactive_pane_hsb = {
