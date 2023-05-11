@@ -116,8 +116,7 @@ Easy peasy.
 We're going to install a terminal called "[Wezterm](https://wezfurlong.org/wezterm/)".  It's fast, configurable, and has great support for many things (font icon extensions, font ligatures, using mac option key effectively, image protocols, large color range ... post-70's stuff). [And other stuff we won't discuss here](https://wezfurlong.org/wezterm/features.html).
 
 ```zsh
-brew tap wez/wezterm
-brew install --cask wez/wezterm/wezterm
+brew install --cask wezterm
 ```
 
 ### Install Terminal and Shell Enhancements.
