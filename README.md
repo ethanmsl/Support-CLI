@@ -26,7 +26,7 @@ We're going to help, *some*.
 	- We'll add fuzzy-finders and quick-jump functionality.
 - Many of the default commands are unecessarilly slow on modern architectures (e.g. for searching through files).
 	- New analogues have been written that are many times faster and can use modern computer features.
-- And the vintage shell language(s), while *now* valued only for terseness and efficiency, spring from a time when they had to balance other needs.  The synatx of more complex commands is often clunky and awkward.
+- And the vintage shell language(s), while *now* valued only for terseness and efficiency, spring from a time when they had to balance other needs.  The syntax of more complex commands is often clunky and awkward.
 	- New analogues with streamlined syntax exist.  Understanding that for *very* complicated actions a modern scripting language should be used instead of shell commands.
 
 ---
